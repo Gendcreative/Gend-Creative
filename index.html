@@ -1446,49 +1446,90 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
     <div class="sec-tag reveal">// Project Inquiry</div>
     <h2 class="ct-form-h reveal d1">Tell us about<br>your <em>project.</em></h2>
     <p class="ct-form-sub reveal d2">Fill in what you know. You don't need to have everything figured out — that's what the first call is for.</p>
-<form class="ct-form reveal d2" id="ctForm" action="https://api.web3forms.com/submit" method="POST">
-<input type="hidden" name="access_key" value="0d2ed456-dde6-472e-88f5-c2d5a6e0ac72">
-<input type="hidden" name="subject" value="New Project Inquiry — Gen-D Creative">
-<input type="hidden" name="from_name" value="Gen-D Creative Website">  
-  <div class="ct-row">
-        <div class="ct-fg"><label class="ct-lbl">Full Name *</label><input type="text" class="ct-inp" placeholder="Your name" id="cf-name" name="name" required></div>
-        <div class="ct-fg"><label class="ct-lbl">Email Address *</label><input type="email" class="ct-inp" placeholder="you@email.com" id="cf-email" name="email" required></div>
-      </div>
+
+    <form class="ct-form reveal d2" id="ctForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="0d2ed456-dde6-472e-88f5-c2d5a6e0ac72">
+      <input type="hidden" name="subject" value="New Project Inquiry — Gen-D Creative">
+      <input type="hidden" name="from_name" value="Gen-D Creative Website">
+      <input type="hidden" name="services" id="servicesField" value="">
+
       <div class="ct-row">
-        <div class="ct-fg"><label class="ct-lbl">Phone / WhatsApp</label><input type="tel" class="ct-inp" placeholder="+91 98765 43210" name="phone" id="cf-phone"></div>
-        <div class="ct-fg"><label class="ct-lbl">Company / Brand</label><input type="text" class="ct-inp" placeholder="Your company name" name="company" id="cf-company">
-</div>
-      </div><div class="chips" id="cf-chips">
-      <div class="chip" onclick="toggleChip(this)">UI/UX Design</div>
-<div class="chip" onclick="toggleChip(this)">Web Development</div>
-<div class="chip" onclick="toggleChip(this)">Mobile App</div>
-<div class="chip" onclick="toggleChip(this)">Graphic Design</div>
-<div class="chip" onclick="toggleChip(this)">Video Editing</div>
-<div class="chip" onclick="toggleChip(this)">Full Package</div>
+        <div class="ct-fg">
+          <label class="ct-lbl">Full Name *</label>
+          <input type="text" class="ct-inp" placeholder="Your name" id="cf-name" name="name" required>
+        </div>
+        <div class="ct-fg">
+          <label class="ct-lbl">Email Address *</label>
+          <input type="email" class="ct-inp" placeholder="you@email.com" id="cf-email" name="email" required>
         </div>
       </div>
+
       <div class="ct-row">
-        <div class="ct-fg"><label class="ct-lbl">Estimated Budget</label>
-          <select class="ct-sel" id="cf-budget" name="budget"><option value="" disabled selected>Select a range</option><option>Under ₹5,000</option><option>₹5,000 – ₹15,000</option><option>₹15,000 – ₹50,000</option><option>₹50,000 – ₹1,00,000</option><option>₹1,00,000+</option></select>
+        <div class="ct-fg">
+          <label class="ct-lbl">Phone / WhatsApp</label>
+          <input type="tel" class="ct-inp" placeholder="+91 98765 43210" name="phone" id="cf-phone">
         </div>
-        <div class="ct-fg"><label class="ct-lbl">Timeline</label>
-         <select class="ct-sel" id="cf-timeline" name="timeline"><option value="" disabled selected>When do you need it?</option><option>ASAP (1–2 weeks)</option><option>Within a month</option><option>1–3 months</option><option>Flexible</option></select>
+        <div class="ct-fg">
+          <label class="ct-lbl">Company / Brand</label>
+          <input type="text" class="ct-inp" placeholder="Your company name" name="company" id="cf-company">
         </div>
       </div>
+
+      <div class="ct-fg">
+        <label class="ct-lbl">What do you need? *</label>
+        <div class="chips" id="cf-chips">
+          <div class="chip" onclick="toggleChip(this)">UI/UX Design</div>
+          <div class="chip" onclick="toggleChip(this)">Web Development</div>
+          <div class="chip" onclick="toggleChip(this)">Mobile App</div>
+          <div class="chip" onclick="toggleChip(this)">Graphic Design</div>
+          <div class="chip" onclick="toggleChip(this)">Video Editing</div>
+          <div class="chip" onclick="toggleChip(this)">Full Package</div>
+        </div>
+      </div>
+
+      <div class="ct-row">
+        <div class="ct-fg">
+          <label class="ct-lbl">Estimated Budget</label>
+          <select class="ct-sel" id="cf-budget" name="budget">
+            <option value="" disabled selected>Select a range</option>
+            <option>Under ₹5,000</option>
+            <option>₹5,000 – ₹15,000</option>
+            <option>₹15,000 – ₹50,000</option>
+            <option>₹50,000 – ₹1,00,000</option>
+            <option>₹1,00,000+</option>
+          </select>
+        </div>
+        <div class="ct-fg">
+          <label class="ct-lbl">Timeline</label>
+          <select class="ct-sel" id="cf-timeline" name="timeline">
+            <option value="" disabled selected>When do you need it?</option>
+            <option>ASAP (1–2 weeks)</option>
+            <option>Within a month</option>
+            <option>1–3 months</option>
+            <option>Flexible</option>
+          </select>
+        </div>
+      </div>
+
       <div class="ct-row full">
-        <div class="ct-fg"><label class="ct-lbl">Describe your project *</label><textarea class="ct-ta" id="cf-desc" name="message" required placeholder="Tell us what you're building, who it's for, your goals, and any references. A rough idea is a great starting point — we love shaping those into something real..."></textarea></div>
+        <div class="ct-fg">
+          <label class="ct-lbl">Describe your project *</label>
+          <textarea class="ct-ta" id="cf-desc" name="message" required placeholder="Tell us what you're building, who it's for, your goals, and any references. A rough idea is a great starting point — we love shaping those into something real..."></textarea>
+        </div>
       </div>
+
       <div class="ct-sub-row">
         <p class="ct-agree">By submitting, you agree to our Privacy Policy. We never share your details with anyone.</p>
         <button class="sub-btn" type="submit">Send Message <div class="sub-ico">→</div></button>
       </div>
-    </div>
     </form>
-<div class="ct-success" id="ctSuccess">
+
+    <div class="ct-success" id="ctSuccess">
       <h3>Message Sent ✓</h3>
       <p>Got it! We're already thinking about your project.<br>Expect a personal reply from Dinesh by tomorrow.<br><br>In the meantime, WhatsApp us at <strong style="color:var(--acc)">9790070152</strong></p>
     </div>
   </div>
+
   <div class="ct-faq">
     <h2 class="ct-faq-h reveal">Frequently <em>Asked</em></h2>
     <div class="faq-2col reveal d1">
