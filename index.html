@@ -1647,14 +1647,12 @@ function toggleFaq(el){
 }
 
 /* ─── FORM ─── */
-function submitForm(){
-  const name=document.getElementById('cf-name')?.value.trim();
-  const email=document.getElementById('cf-email')?.value.trim();
-  const desc=document.getElementById('cf-desc')?.value.trim();
-  if(!name||!email||!desc){alert('Please fill in your name, email, and project description.');return;}
-  document.getElementById('ctForm').style.display='none';
-  const s=document.getElementById('ctSuccess');s.style.display='block';
-  s.scrollIntoView({behavior:'smooth'});
+function toggleChip(el){
+  el.classList.toggle('on');
+  const selected=[...document.querySelectorAll('.chip.on')]
+    .map(c=>c.textContent).join(', ');
+  const f=document.getElementById('servicesField');
+  if(f)f.value=selected;
 }
 
 /* ─── MOBILE MENU ─── */
