@@ -31,29 +31,29 @@ body{background:var(--bg);color:var(--fg);font-family:var(--ff-body);overflow-x:
 
 /* ─── TOKENS ─── */
 :root{
---bg:#06060a;
---bg1:#0b0b10;
---bg2:#101016;
---bg3:#16161e;
---fg:#eeeae0;
---fg2:rgba(238,234,224,.58);
---fg3:rgba(238,234,224,.26);
---fg4:rgba(238,234,224,.08);
---acc:#00ff87;
---acc2:#00e87a;
---acc-glow:rgba(0,255,135,.22);
---acc-dim:rgba(0,255,135,.12);
---warm:#ff6535;
---warm2:rgba(255,101,53,.1);
---brd:rgba(238,234,224,.055);
---brd2:rgba(238,234,224,.11);
---brd-acc:rgba(0,255,135,.18);
---ff-disp:'Syne',sans-serif;
---ff-body:'DM Sans',sans-serif;
---ff-mono:'JetBrains Mono',monospace;
---ease:cubic-bezier(.16,1,.3,1);
---ease2:cubic-bezier(.4,0,.2,1);
---r:12px;
+  --bg:#06060a;
+  --bg1:#0b0b10;
+  --bg2:#101016;
+  --bg3:#16161e;
+  --fg:#eeeae0;
+  --fg2:rgba(238,234,224,.58);
+  --fg3:rgba(238,234,224,.26);
+  --fg4:rgba(238,234,224,.08);
+  --acc:#00ff87;
+  --acc2:#00e87a;
+  --acc-glow:rgba(0,255,135,.22);
+  --acc-dim:rgba(0,255,135,.12);
+  --warm:#ff6535;
+  --warm2:rgba(255,101,53,.1);
+  --brd:rgba(238,234,224,.055);
+  --brd2:rgba(238,234,224,.11);
+  --brd-acc:rgba(0,255,135,.18);
+  --ff-disp:'Syne',sans-serif;
+  --ff-body:'DM Sans',sans-serif;
+  --ff-mono:'JetBrains Mono',monospace;
+  --ease:cubic-bezier(.16,1,.3,1);
+  --ease2:cubic-bezier(.4,0,.2,1);
+  --r:12px;
 }
 
 /* ─── SCROLLBAR ─── */
@@ -127,7 +127,7 @@ nav.stuck{padding:14px 64px;background:rgba(6,6,10,.93);backdrop-filter:blur(28p
 body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;opacity:.028;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
 /* ════════════════════════════════
- HOME — HERO
+   HOME — HERO
 ════════════════════════════════ */
 .h-hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 64px 88px;position:relative;overflow:hidden;background:var(--bg)}
 #heroCanvas{position:absolute;inset:0;width:100%;height:100%}
@@ -221,7 +221,6 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .h-why-l h2 em{font-style:normal;color:var(--acc)}
 .h-why-l p{font-size:14px;line-height:1.9;color:var(--fg2);margin-top:24px}
 .why-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.06)}
-.why-item{display:grid;grid-template-columns:72px 1fr;gap:20px;align-items:start;padding:40px 36px;position:relative;cursor:none;transition:background .3s;background:var(--bg);border:none}
 .why-item{display:grid;grid-template-columns:52px 1fr;gap:24px;align-items:start;padding:40px 36px;border-bottom:none;position:relative;cursor:none;transition:background .3s;background:var(--bg)}
 .why-item:first-child{border-top:1px solid var(--brd)}
 .why-item:hover{background:var(--bg2)}
@@ -371,7 +370,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .foot-loc-dot{width:6px;height:6px;border-radius:50%;background:var(--acc);animation:pulse2 2s ease-in-out infinite}
 
 /* ════════════════════════════════
- SERVICES PAGE
+   SERVICES PAGE
 ════════════════════════════════ */
 .sv-hero{padding:175px 64px 90px;position:relative;overflow:hidden}
 .sv-hero::before{content:'';position:absolute;right:-10%;top:0;bottom:0;width:55%;background:radial-gradient(ellipse 75% 80% at 90% 50%,rgba(0,255,135,.05),transparent);pointer-events:none}
@@ -405,7 +404,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .sv-cta-band h2 em{font-style:normal;color:var(--acc)}
 
 /* ════════════════════════════════
- ABOUT PAGE
+   ABOUT PAGE
 ════════════════════════════════ */
 .ab-hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:160px 64px 80px;gap:80px;position:relative;overflow:hidden}
 .ab-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 40% 60% at 5% 65%,rgba(0,255,135,.05),transparent);pointer-events:none}
@@ -461,7 +460,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .ab-story-text em{color:var(--acc);font-style:normal;font-family:var(--ff-mono);font-size:11.5px}
 
 /* ════════════════════════════════
- WORK PAGE
+   WORK PAGE
 ════════════════════════════════ */
 .wk-hero{padding:175px 64px 68px;position:relative;overflow:hidden}
 .wk-hero::before{content:'';position:absolute;top:0;right:-10%;width:55%;height:100%;background:radial-gradient(ellipse 60% 80% at 80% 40%,rgba(0,255,135,.05),transparent);pointer-events:none}
@@ -497,7 +496,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .p6{background:linear-gradient(135deg,#001016,#00242e);aspect-ratio:4/3}
 
 /* ════════════════════════════════
- CONTACT PAGE
+   CONTACT PAGE
 ════════════════════════════════ */
 .ct-hero{padding:175px 64px 80px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;border-bottom:1px solid var(--brd);position:relative;overflow:hidden}
 .ct-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 45% 65% at 8% 45%,rgba(0,255,135,.04),transparent);pointer-events:none}
@@ -556,46 +555,46 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .faq-2col{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
 
 /* ════════════════════════════════
- RESPONSIVE
+   RESPONSIVE
 ════════════════════════════════ */
 @media(max-width:1024px){
-.nav-links,.nav-cta-btn{display:none}
-.nav-ham{display:flex}
-nav{padding:20px 28px}
-nav.stuck{padding:14px 28px}
+  .nav-links,.nav-cta-btn{display:none}
+  .nav-ham{display:flex}
+  nav{padding:20px 28px}
+  nav.stuck{padding:14px 28px}
 }
 @media(max-width:768px){
-.h-hero,.wk-hero,.ct-hero,.sv-hero,.ab-hero{padding-left:28px;padding-right:28px;padding-top:110px}
-.h-sv-sec,.h-why,.h-work,.h-tech,.h-testi,.h-nums,.h-proc,.h-insights,.h-faq,.h-cta,.ab-team,.ab-values,.ab-story,.ct-form-wrap,.ct-faq,.sv-list,.sv-proc,.sv-cta-band,.wk-filter,.site-footer{padding-left:28px;padding-right:28px}
-.wk-grid{padding-left:28px;padding-right:28px}
-.h-about{grid-template-columns:1fr}
-.h-about-l{border-right:none;border-bottom:1px solid var(--brd);padding:56px 28px}
-.h-about-r{padding:56px 28px}
-.sv-acc-grid,.proc-grid,.h-proc-steps{grid-template-columns:1fr}
-.h-why-grid{grid-template-columns:1fr}
-.h-wk-grid{grid-template-columns:1fr}
-.h-wk-col{gap:14px}
-.testi-grid{grid-template-columns:1fr}
-.h-nums{grid-template-columns:1fr 1fr}
-.h-proc-head{grid-template-columns:1fr}
-.h-ins-grid{grid-template-columns:1fr}
-.h-faq-inner{grid-template-columns:1fr}
-.ab-hero{grid-template-columns:1fr;min-height:auto;padding-top:110px}
-.ab-nums{grid-template-columns:1fr 1fr}
-.ab-team-grid,.ab-val-grid{grid-template-columns:1fr}
-.ab-story{grid-template-columns:1fr}
-.ab-story-stick{position:static}
-.ct-hero{grid-template-columns:1fr;gap:48px;padding-top:110px}
-.ct-row{grid-template-columns:1fr}
-.faq-2col{grid-template-columns:1fr}
-.foot-grid{grid-template-columns:1fr 1fr;gap:32px}
-.sv-row{grid-template-columns:52px 1fr;gap:20px}
-.sv-row-r{display:none}
-.sv-cta-band{grid-template-columns:1fr}
-.wk-grid{grid-template-columns:1fr;padding-bottom:60px}
-.wk-item.span2{grid-column:auto}
-.h-hero-foot{flex-direction:column;align-items:flex-start}
-.h-hero-scroll{display:none}
+  .h-hero,.wk-hero,.ct-hero,.sv-hero,.ab-hero{padding-left:28px;padding-right:28px;padding-top:110px}
+  .h-sv-sec,.h-why,.h-work,.h-tech,.h-testi,.h-nums,.h-proc,.h-insights,.h-faq,.h-cta,.ab-team,.ab-values,.ab-story,.ct-form-wrap,.ct-faq,.sv-list,.sv-proc,.sv-cta-band,.wk-filter,.site-footer{padding-left:28px;padding-right:28px}
+  .wk-grid{padding-left:28px;padding-right:28px}
+  .h-about{grid-template-columns:1fr}
+  .h-about-l{border-right:none;border-bottom:1px solid var(--brd);padding:56px 28px}
+  .h-about-r{padding:56px 28px}
+  .sv-acc-grid,.proc-grid,.h-proc-steps{grid-template-columns:1fr}
+  .h-why-grid{grid-template-columns:1fr}
+  .h-wk-grid{grid-template-columns:1fr}
+  .h-wk-col{gap:14px}
+  .testi-grid{grid-template-columns:1fr}
+  .h-nums{grid-template-columns:1fr 1fr}
+  .h-proc-head{grid-template-columns:1fr}
+  .h-ins-grid{grid-template-columns:1fr}
+  .h-faq-inner{grid-template-columns:1fr}
+  .ab-hero{grid-template-columns:1fr;min-height:auto;padding-top:110px}
+  .ab-nums{grid-template-columns:1fr 1fr}
+  .ab-team-grid,.ab-val-grid{grid-template-columns:1fr}
+  .ab-story{grid-template-columns:1fr}
+  .ab-story-stick{position:static}
+  .ct-hero{grid-template-columns:1fr;gap:48px;padding-top:110px}
+  .ct-row{grid-template-columns:1fr}
+  .faq-2col{grid-template-columns:1fr}
+  .foot-grid{grid-template-columns:1fr 1fr;gap:32px}
+  .sv-row{grid-template-columns:52px 1fr;gap:20px}
+  .sv-row-r{display:none}
+  .sv-cta-band{grid-template-columns:1fr}
+  .wk-grid{grid-template-columns:1fr;padding-bottom:60px}
+  .wk-item.span2{grid-column:auto}
+  .h-hero-foot{flex-direction:column;align-items:flex-start}
+  .h-hero-scroll{display:none}
 }
 /* ── SERVICE CARD INTERACTIONS ── */
 .sv-acc-card{transition:transform 0.3s cubic-bezier(.16,1,.3,1),box-shadow 0.3s ease,background 0.3s ease;transform-style:preserve-3d;cursor:pointer;position:relative;overflow:hidden}
@@ -619,28 +618,6 @@ nav.stuck{padding:14px 28px}
 @keyframes iconPulse{0%{transform:scale(1);opacity:0.8}100%{transform:scale(1.5);opacity:0}}
 .sv-ico-box span{position:relative;z-index:3;color:#00ff87;transition:color 0.3s ease,transform 0.3s ease}
 .sv-acc-card:hover .sv-ico-box span{color:#ffffff;transform:scale(1.1)}
-/* WHY ITEM ICON HOVER ANIMATION */
-.why-item .sv-ico-box{
-  transition:transform 0.4s cubic-bezier(.16,1,.3,1),
-             background 0.4s ease,
-             border-color 0.4s ease,
-             box-shadow 0.4s ease,
-             color 0.3s ease;
-}
-.why-item:hover .sv-ico-box{
-  background:#00ff87 !important;
-  border-color:#00ff87 !important;
-  transform:scale(1.15) rotate(-6deg);
-  box-shadow:0 0 28px rgba(0,255,135,0.55),
-             0 0 56px rgba(0,255,135,0.25);
-  color:#000 !important;
-}
-.why-item:hover .sv-ico-box svg{
-  stroke:#000;
-}
-.why-item:hover .why-body h4{
-  color:var(--acc);
-}</style>
 </style>
 </head>
 <body>
@@ -651,202 +628,202 @@ nav.stuck{padding:14px 28px}
 
 <!-- MOBILE MENU -->
 <div class="mob-menu" id="mobMenu">
-<button class="mob-close" onclick="closeMob()">✕</button>
-<ul>
-<li><a href="#" onclick="go('home');closeMob()">Home</a></li>
-<li><a href="#" onclick="go('services');closeMob()">Services</a></li>
-<li><a href="#" onclick="go('about');closeMob()">About</a></li>
-<li><a href="#" onclick="go('work');closeMob()">Work</a></li>
-<li><a href="#" onclick="go('contact');closeMob()">Contact</a></li>
-</ul>
-<div class="mob-foot">Say hello → <a href="mailto:gendcreative@gmail.com">gendcreative@gmail.com</a></div>
+  <button class="mob-close" onclick="closeMob()">✕</button>
+  <ul>
+    <li><a href="#" onclick="go('home');closeMob()">Home</a></li>
+    <li><a href="#" onclick="go('services');closeMob()">Services</a></li>
+    <li><a href="#" onclick="go('about');closeMob()">About</a></li>
+    <li><a href="#" onclick="go('work');closeMob()">Work</a></li>
+    <li><a href="#" onclick="go('contact');closeMob()">Contact</a></li>
+  </ul>
+  <div class="mob-foot">Say hello → <a href="mailto:gendcreative@gmail.com">gendcreative@gmail.com</a></div>
 </div>
 
 <!-- NAV -->
 <nav id="nav">
-<a href="#" class="nav-logo" onclick="return go('home')">
-<div class="logo-mark">
-<svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="7" y="7" width="20" height="20" rx="2" stroke="#00ff87" stroke-width="1.4" transform="rotate(45 17 17)"/>
-<rect x="12" y="12" width="10" height="10" rx="1" fill="#00ff87" transform="rotate(45 17 17)"/>
-<circle cx="17" cy="17" r="2.5" fill="#06060a"/>
-</svg>
-</div>
-<span class="nav-logo-txt">Gen<em>-D</em> Creative</span>
-</a>
-<ul class="nav-links">
-<li><a href="#" id="nl-home" class="act" onclick="return go('home')">Home</a></li>
-<li><a href="#" id="nl-services" onclick="return go('services')">Services</a></li>
-<li><a href="#" id="nl-about" onclick="return go('about')">About</a></li>
-<li><a href="#" id="nl-work" onclick="return go('work')">Work</a></li>
-<li><a href="#" id="nl-contact" class="nav-cta-btn" onclick="return go('contact')">Let's Talk →</a></li>
-</ul>
-<button class="nav-ham" onclick="toggleMob()" aria-label="Menu">
-<span></span><span></span><span></span>
-</button>
+  <a href="#" class="nav-logo" onclick="return go('home')">
+    <div class="logo-mark">
+      <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="7" y="7" width="20" height="20" rx="2" stroke="#00ff87" stroke-width="1.4" transform="rotate(45 17 17)"/>
+        <rect x="12" y="12" width="10" height="10" rx="1" fill="#00ff87" transform="rotate(45 17 17)"/>
+        <circle cx="17" cy="17" r="2.5" fill="#06060a"/>
+      </svg>
+    </div>
+    <span class="nav-logo-txt">Gen<em>-D</em> Creative</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#" id="nl-home" class="act" onclick="return go('home')">Home</a></li>
+    <li><a href="#" id="nl-services" onclick="return go('services')">Services</a></li>
+    <li><a href="#" id="nl-about" onclick="return go('about')">About</a></li>
+    <li><a href="#" id="nl-work" onclick="return go('work')">Work</a></li>
+    <li><a href="#" id="nl-contact" class="nav-cta-btn" onclick="return go('contact')">Let's Talk →</a></li>
+  </ul>
+  <button class="nav-ham" onclick="toggleMob()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 
 <!-- ═══════════════════════════════════
-   HOME PAGE
+     HOME PAGE
 ═══════════════════════════════════ -->
 <div class="pg on" id="pg-home">
 
-<!-- HERO -->
-<section class="h-hero">
-<canvas id="heroCanvas"></canvas>
-<div class="h-hero-radial"></div>
-<div class="h-hero-warm"></div>
-<div class="h-hero-grid"></div>
-<div class="h-hero-content">
-<div class="h-hero-status">
-<span class="h-pulse"></span>
-Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
-</div>
-<h1 class="h-hero-h">
-<span class="ln"><span>We Make</span></span>
-<span class="ln"><span>Your Idea</span></span>
-<span class="ln"><span>Feel Real.</span></span>
-</h1>
-<div class="h-hero-foot">
-<p class="h-hero-desc">We started Gen-D because we were tired of seeing <strong>great ideas get mediocre design.</strong> Three years later, we're still angry about it — and every project we touch proves it.</p>
-<div class="h-hero-btns">
-<a href="#" class="btn btn-acc" onclick="return go('contact')">Start a Project →</a>
-<a href="#" class="btn btn-ghost" onclick="return go('work')">See Our Work</a>
-</div>
-</div>
-</div>
-<div class="h-hero-scroll">
-<span>scroll</span>
-<div class="scroll-line"></div>
-</div>
-</section>
+  <!-- HERO -->
+  <section class="h-hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="h-hero-radial"></div>
+    <div class="h-hero-warm"></div>
+    <div class="h-hero-grid"></div>
+    <div class="h-hero-content">
+      <div class="h-hero-status">
+        <span class="h-pulse"></span>
+        Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
+      </div>
+      <h1 class="h-hero-h">
+        <span class="ln"><span>We Make</span></span>
+        <span class="ln"><span>Your Idea</span></span>
+        <span class="ln"><span>Feel Real.</span></span>
+      </h1>
+      <div class="h-hero-foot">
+        <p class="h-hero-desc">We started Gen-D because we were tired of seeing <strong>great ideas get mediocre design.</strong> Three years later, we're still angry about it — and every project we touch proves it.</p>
+        <div class="h-hero-btns">
+          <a href="#" class="btn btn-acc" onclick="return go('contact')">Start a Project →</a>
+          <a href="#" class="btn btn-ghost" onclick="return go('work')">See Our Work</a>
+        </div>
+      </div>
+    </div>
+    <div class="h-hero-scroll">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-<!-- TICKER -->
-<div class="h-ticker">
-<div class="h-ticker-wrap" id="tickerInner">
-<div class="h-tick-item"><span class="t-txt hi">StyleVault</span><span class="t-dot"></span><span class="t-txt">3× revenue after redesign</span></div>
-<div class="h-tick-item"><span class="t-txt hi">FitTrack</span><span class="t-dot"></span><span class="t-txt">4.8★ App Store · Week One</span></div>
-<div class="h-tick-item"><span class="t-txt hi">NovaBrands</span><span class="t-dot"></span><span class="t-txt">Full identity in 12 days</span></div>
-<div class="h-tick-item"><span class="t-txt hi">UI/UX Design</span><span class="t-dot"></span><span class="t-txt">Web Development</span><span class="t-dot"></span><span class="t-txt">Mobile Apps</span></div>
-<div class="h-tick-item"><span class="t-txt hi">Branding</span><span class="t-dot"></span><span class="t-txt">Video Production</span><span class="t-dot"></span><span class="t-txt">Chennai · Worldwide</span></div>
-<div class="h-tick-item"><span class="t-txt hi">FinanceFlow</span><span class="t-dot"></span><span class="t-txt">32% jump in user retention</span></div>
-<!-- duplicate -->
-<div class="h-tick-item"><span class="t-txt hi">StyleVault</span><span class="t-dot"></span><span class="t-txt">3× revenue after redesign</span></div>
-<div class="h-tick-item"><span class="t-txt hi">FitTrack</span><span class="t-dot"></span><span class="t-txt">4.8★ App Store · Week One</span></div>
-<div class="h-tick-item"><span class="t-txt hi">NovaBrands</span><span class="t-dot"></span><span class="t-txt">Full identity in 12 days</span></div>
-<div class="h-tick-item"><span class="t-txt hi">UI/UX Design</span><span class="t-dot"></span><span class="t-txt">Web Development</span><span class="t-dot"></span><span class="t-txt">Mobile Apps</span></div>
-<div class="h-tick-item"><span class="t-txt hi">Branding</span><span class="t-dot"></span><span class="t-txt">Video Production</span><span class="t-dot"></span><span class="t-txt">Chennai · Worldwide</span></div>
-<div class="h-tick-item"><span class="t-txt hi">FinanceFlow</span><span class="t-dot"></span><span class="t-txt">32% jump in user retention</span></div>
-</div>
-</div>
+  <!-- TICKER -->
+  <div class="h-ticker">
+    <div class="h-ticker-wrap" id="tickerInner">
+      <div class="h-tick-item"><span class="t-txt hi">StyleVault</span><span class="t-dot"></span><span class="t-txt">3× revenue after redesign</span></div>
+      <div class="h-tick-item"><span class="t-txt hi">FitTrack</span><span class="t-dot"></span><span class="t-txt">4.8★ App Store · Week One</span></div>
+      <div class="h-tick-item"><span class="t-txt hi">NovaBrands</span><span class="t-dot"></span><span class="t-txt">Full identity in 12 days</span></div>
+      <div class="h-tick-item"><span class="t-txt hi">UI/UX Design</span><span class="t-dot"></span><span class="t-txt">Web Development</span><span class="t-dot"></span><span class="t-txt">Mobile Apps</span></div>
+      <div class="h-tick-item"><span class="t-txt hi">Branding</span><span class="t-dot"></span><span class="t-txt">Video Production</span><span class="t-dot"></span><span class="t-txt">Chennai · Worldwide</span></div>
+      <div class="h-tick-item"><span class="t-txt hi">FinanceFlow</span><span class="t-dot"></span><span class="t-txt">32% jump in user retention</span></div>
+      <!-- duplicate -->
+      <div class="h-tick-item"><span class="t-txt hi">StyleVault</span><span class="t-dot"></span><span class="t-txt">3× revenue after redesign</span></div>
+      <div class="h-tick-item"><span class="t-txt hi">FitTrack</span><span class="t-dot"></span><span class="t-txt">4.8★ App Store · Week One</span></div>
+      <div class="h-tick-item"><span class="t-txt hi">NovaBrands</span><span class="t-dot"></span><span class="t-txt">Full identity in 12 days</span></div>
+      <div class="h-tick-item"><span class="t-txt hi">UI/UX Design</span><span class="t-dot"></span><span class="t-txt">Web Development</span><span class="t-dot"></span><span class="t-txt">Mobile Apps</span></div>
+      <div class="h-tick-item"><span class="t-txt hi">Branding</span><span class="t-dot"></span><span class="t-txt">Video Production</span><span class="t-dot"></span><span class="t-txt">Chennai · Worldwide</span></div>
+      <div class="h-tick-item"><span class="t-txt hi">FinanceFlow</span><span class="t-dot"></span><span class="t-txt">32% jump in user retention</span></div>
+    </div>
+  </div>
 
-<!-- ABOUT BAND -->
-<div class="h-about">
-<div class="h-about-l">
-<div class="sec-tag reveal">// Who We Are</div>
-<h2 class="h-about-h reveal d1">Small by choice.<br><span class="acc">Focused by design.</span></h2>
-<p class="h-about-p reveal d2">We're a tight team of three from Chennai — a designer, a developer, and a creative director who can't stop thinking about your brand even when they should be sleeping. <strong>We don't take 30 clients at once. We take yours seriously.</strong></p>
-<a href="#" class="btn btn-ghost reveal d3" onclick="return go('about')">Meet the Team →</a>
-</div>
-<div class="h-about-r">
-<div class="stats-grid reveal">
-<div class="stat-box">
-<div class="stat-n">5<em>+</em></div>
-<div class="stat-l">Happy Clients</div>
-</div>
-<div class="stat-box">
-<div class="stat-n">20<em>+</em></div>
-<div class="stat-l">Projects Done</div>
-</div>
-<div class="stat-box">
-<div class="stat-n">3<em>yrs</em></div>
-<div class="stat-l">Years Active</div>
-</div>
-<div class="stat-box">
-<div class="stat-n">5<em>★</em></div>
-<div class="stat-l">Client Rating</div>
-</div>
-</div>
-<div class="h-team-row reveal d2">
-<div class="h-av" style="background:#e84c1e;color:#fff">D</div>
-<div class="h-av" style="background:#7c3aed;color:#fff">P</div>
-<div class="h-av" style="background:#0891b2;color:#fff">K</div>
-<div class="h-team-txt">
-<strong>Dinesh, Priya & Karthik</strong>
-<span>Three humans behind every project</span>
-</div>
-</div>
-</div>
-</div>
+  <!-- ABOUT BAND -->
+  <div class="h-about">
+    <div class="h-about-l">
+      <div class="sec-tag reveal">// Who We Are</div>
+      <h2 class="h-about-h reveal d1">Small by choice.<br><span class="acc">Focused by design.</span></h2>
+      <p class="h-about-p reveal d2">We're a tight team of three from Chennai — a designer, a developer, and a creative director who can't stop thinking about your brand even when they should be sleeping. <strong>We don't take 30 clients at once. We take yours seriously.</strong></p>
+      <a href="#" class="btn btn-ghost reveal d3" onclick="return go('about')">Meet the Team →</a>
+    </div>
+    <div class="h-about-r">
+      <div class="stats-grid reveal">
+        <div class="stat-box">
+          <div class="stat-n">5<em>+</em></div>
+          <div class="stat-l">Happy Clients</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-n">20<em>+</em></div>
+          <div class="stat-l">Projects Done</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-n">3<em>yrs</em></div>
+          <div class="stat-l">Years Active</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-n">5<em>★</em></div>
+          <div class="stat-l">Client Rating</div>
+        </div>
+      </div>
+      <div class="h-team-row reveal d2">
+        <div class="h-av" style="background:#e84c1e;color:#fff">D</div>
+        <div class="h-av" style="background:#7c3aed;color:#fff">P</div>
+        <div class="h-av" style="background:#0891b2;color:#fff">K</div>
+        <div class="h-team-txt">
+          <strong>Dinesh, Priya & Karthik</strong>
+          <span>Three humans behind every project</span>
+        </div>
+      </div>
+    </div>
+  </div>
 
-<!-- SERVICES -->
-<section class="h-sv-sec">
-<div class="h-sv-head">
-<div>
-<div class="sec-tag reveal">// What We Do</div>
-<h2 class="h-sv-headh reveal d1">Here's what<br>we can do <em style="font-style:normal;color:var(--acc)">for you.</em></h2>
-</div>
-<a href="#" class="btn btn-ghost reveal d2" onclick="return go('services')" style="flex-shrink:0">All Services →</a>
-</div>
-<div class="sv-acc-grid">
-<div class="sv-acc-card reveal" onclick="go('contact')">
-<div class="sv-card-arr">↗</div>
-<div class="sv-num">// 01</div>
-<div class="sv-ico-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
-<div class="sv-name">UI/UX Design</div>
-<p class="sv-desc">Interfaces that feel intuitive and look stunning. Wireframe to pixel-perfect Figma prototype.</p>
-</div>
-<div class="sv-acc-card reveal d1" onclick="go('contact')">
-<div class="sv-card-arr">↗</div>
-<div class="sv-num">// 02</div>
-<div class="sv-ico-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
-<div class="sv-name">Web Development</div>
-<p class="sv-desc">Fast, scalable websites. Custom code, WordPress, Shopify — built for results.</p>
-</div>
-<div class="sv-acc-card reveal d2" onclick="go('contact')">
-<div class="sv-card-arr">↗</div>
-<div class="sv-num">// 03</div>
-<div class="sv-ico-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-<div class="sv-name">Mobile Apps</div>
-<p class="sv-desc">iOS & Android. Concept to App Store. We've shipped apps with 4.8★ on day one.</p>
-</div>
-<div class="sv-acc-card reveal" onclick="go('contact')">
-<div class="sv-card-arr">↗</div>
-<div class="sv-num">// 04</div>
-<div class="sv-ico-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-<div class="sv-name">Graphic Design</div>
-<p class="sv-desc">Logos, brand systems, social kits. Identity that makes your brand impossible to forget.</p>
-</div>
-<div class="sv-acc-card reveal d1" onclick="go('contact')">
-<div class="sv-card-arr">↗</div>
-<div class="sv-num">// 05</div>
-<div class="sv-ico-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg></div>
-<div class="sv-name">Video Editing</div>
-<p class="sv-desc">Reels, brand films, motion graphics. Content that stops the scroll and converts.</p>
-</div>
-<div class="sv-acc-card featured reveal d2" onclick="go('contact')">
-<div class="sv-card-arr">↗</div>
-<div class="sv-num">// 06</div>
-<div class="sv-ico-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
-<div class="sv-name">Custom Package?</div>
-<p class="sv-desc">Got something unique? We offer bundled services and retainer arrangements — built around you.</p>
-<p class="sv-micro">"We'd rather design your package than force you into ours."</p>
-<div class="sv-price" style="color:var(--acc)">Let's Talk →</div>
-</div>
-</div>
-</section>
+  <!-- SERVICES -->
+  <section class="h-sv-sec">
+    <div class="h-sv-head">
+      <div>
+        <div class="sec-tag reveal">// What We Do</div>
+        <h2 class="h-sv-headh reveal d1">Here's what<br>we can do <em style="font-style:normal;color:var(--acc)">for you.</em></h2>
+      </div>
+      <a href="#" class="btn btn-ghost reveal d2" onclick="return go('services')" style="flex-shrink:0">All Services →</a>
+    </div>
+    <div class="sv-acc-grid">
+      <div class="sv-acc-card reveal" onclick="go('contact')">
+        <div class="sv-card-arr">↗</div>
+        <div class="sv-num">// 01</div>
+        <div class="sv-ico-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
+        <div class="sv-name">UI/UX Design</div>
+        <p class="sv-desc">Interfaces that feel intuitive and look stunning. Wireframe to pixel-perfect Figma prototype.</p>
+      </div>
+      <div class="sv-acc-card reveal d1" onclick="go('contact')">
+        <div class="sv-card-arr">↗</div>
+        <div class="sv-num">// 02</div>
+        <div class="sv-ico-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+        <div class="sv-name">Web Development</div>
+        <p class="sv-desc">Fast, scalable websites. Custom code, WordPress, Shopify — built for results.</p>
+      </div>
+      <div class="sv-acc-card reveal d2" onclick="go('contact')">
+        <div class="sv-card-arr">↗</div>
+        <div class="sv-num">// 03</div>
+        <div class="sv-ico-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <div class="sv-name">Mobile Apps</div>
+        <p class="sv-desc">iOS & Android. Concept to App Store. We've shipped apps with 4.8★ on day one.</p>
+      </div>
+      <div class="sv-acc-card reveal" onclick="go('contact')">
+        <div class="sv-card-arr">↗</div>
+        <div class="sv-num">// 04</div>
+        <div class="sv-ico-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <div class="sv-name">Graphic Design</div>
+        <p class="sv-desc">Logos, brand systems, social kits. Identity that makes your brand impossible to forget.</p>
+      </div>
+      <div class="sv-acc-card reveal d1" onclick="go('contact')">
+        <div class="sv-card-arr">↗</div>
+        <div class="sv-num">// 05</div>
+       <div class="sv-ico-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><circle cx="11" cy="11" r="2"/></svg></div>
+        <div class="sv-name">Video Editing</div>
+        <p class="sv-desc">Reels, brand films, motion graphics. Content that stops the scroll and converts.</p>
+      </div>
+      <div class="sv-acc-card featured reveal d2" onclick="go('contact')">
+        <div class="sv-card-arr">↗</div>
+        <div class="sv-num">// 06</div>
+        <div class="sv-ico-box"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg></div>
+        <div class="sv-name">Custom Package?</div>
+        <p class="sv-desc">Got something unique? We offer bundled services and retainer arrangements — built around you.</p>
+        <p class="sv-micro">"We'd rather design your package than force you into ours."</p>
+        <div class="sv-price" style="color:var(--acc)">Let's Talk →</div>
+      </div>
+    </div>
+  </section>
 
-<!-- WHY US -->
-<section class="h-why">
-<div class="h-why-grid">
-<div class="h-why-l reveal">
-<h2>Why<br>choose<br><em>Gen-D?</em></h2>
-<p>We're not here to win awards. We're here to move your needle. Here's what makes us genuinely different — not just on paper.</p>
-</div>
-<div class="why-list">
-<div class="why-item reveal d1">
-<div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+  <!-- WHY US -->
+  <section class="h-why">
+    <div class="h-why-grid">
+      <div class="h-why-l reveal">
+        <h2>Why<br>choose<br><em>Gen-D?</em></h2>
+        <p>We're not here to win awards. We're here to move your needle. Here's what makes us genuinely different — not just on paper.</p>
+      </div>
+      <div class="why-list">
+        <div class="why-item reveal d1">
+          <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
           <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div></span></div>
           <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div></div>
           <div class="why-body">
@@ -856,6 +833,8 @@ Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
         </div>
         <div class="why-item reveal d2">
           <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></span></div>
+          <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div>
           <div class="why-body">
             <h4>We'll push back — because we care.</h4>
             <p>We're not order-takers. If we think you're heading in the wrong direction, we'll tell you. That's what a real partner does. You hired us for our judgment, not just our hands.</p>
@@ -863,6 +842,8 @@ Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
         </div>
         <div class="why-item reveal d3">
           <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div></span></div>
+          <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div></div>
           <div class="why-body">
             <h4>Fast without cutting corners.</h4>
             <p>We've built systems that let us deliver high quality on tight timelines. Most studios choose one — we do both. StyleVault's redesign took 9 days. Check the results.</p>
@@ -870,787 +851,744 @@ Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
         </div>
         <div class="why-item reveal d4">
           <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></span></div>
+          <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div>
           <div class="why-body">
             <h4>No hidden costs. No vague timelines.</h4>
             <p>Clear scope, clear pricing, clear communication. You'll always know what's happening and when. No surprises on the invoice and no radio silence in the middle of a project.</p>
           </div>
         </div>
       </div>
-<div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div></span></div>
-<div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div></div>
-<div class="why-body">
-<h4>We don't decorate. We solve.</h4>
-<p>Every design decision has a business reason. Beauty and function aren't a trade-off — if something looks great but doesn't work, we'll say so before you ship it.</p>
-</div>
-</div>
-<div class="why-item reveal d2">
-<div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-          <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></span></div>
-          <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div>
-          <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
-<div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></span></div>
-<div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div>
-<div class="why-body">
-<h4>We'll push back — because we care.</h4>
-<p>We're not order-takers. If we think you're heading in the wrong direction, we'll tell you. That's what a real partner does. You hired us for our judgment, not just our hands.</p>
-</div>
-</div>
-<div class="why-item reveal d3">
-<div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-          <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div></span></div>
-          <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div></div>
-          <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-<div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div></span></div>
-<div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div></div>
-<div class="why-body">
-<h4>Fast without cutting corners.</h4>
-<p>We've built systems that let us deliver high quality on tight timelines. Most studios choose one — we do both. StyleVault's redesign took 9 days. Check the results.</p>
-</div>
-</div>
-<div class="why-item reveal d4">
-<div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-          <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></span></div>
-          <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div>
-          <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
-<div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></span></div>
-<div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div>
-<div class="why-body">
-<h4>No hidden costs. No vague timelines.</h4>
-<p>Clear scope, clear pricing, clear communication. You'll always know what's happening and when. No surprises on the invoice and no radio silence in the middle of a project.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
+    </div>
+  </section>
 
-<!-- WORK PREVIEW -->
-<section class="h-work">
-<div class="h-work-head">
-<div class="sec-tag reveal">// Selected Projects</div>
-<h2 class="reveal d1">Work That <em>Moved the Needle</em></h2>
-</div>
-<div class="h-wk-grid">
-<div class="h-wk-col">
-<div class="h-wk-card tall reveal" onclick="go('work')">
-<div class="h-wk-bg" style="background:linear-gradient(135deg,#0a1628,#1a2d4e,#112233)">
-<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.2;padding:40px">
-<div style="width:100%;display:grid;grid-template-columns:repeat(5,1fr);gap:8px">
-<div style="background:rgba(0,255,135,.4);height:28px;border-radius:4px;grid-column:span 5"></div>
-<div style="background:rgba(0,255,135,.15);height:80px;border-radius:4px;grid-column:span 2"></div>
-<div style="background:rgba(0,255,135,.08);height:80px;border-radius:4px;grid-column:span 3"></div>
-<div style="background:rgba(0,255,135,.1);height:50px;border-radius:4px;grid-column:span 3"></div>
-<div style="background:rgba(0,255,135,.06);height:50px;border-radius:4px;grid-column:span 2"></div>
-</div>
-</div>
-</div>
-<div class="h-wk-ov"></div>
-<div class="h-wk-pill">DASHBOARD</div>
-<div class="h-wk-arrow">↗</div>
-<div class="h-wk-info">
-<div class="h-wk-cat">UI/UX Design</div>
-<div class="h-wk-name">Analytics Dashboard</div>
-<div class="h-wk-outcome">→ 40% faster decisions</div>
-</div>
-</div>
-</div>
-<div class="h-wk-col">
-<div class="h-wk-card mid reveal d1" onclick="go('work')">
-<div class="h-wk-bg" style="background:linear-gradient(135deg,#0f0a1e,#1e0f3d,#2d1a5a)"></div>
-<div class="h-wk-ov"></div>
-<div class="h-wk-pill">APP</div>
-<div class="h-wk-arrow">↗</div>
-<div class="h-wk-info">
-<div class="h-wk-cat">Mobile · iOS & Android</div>
-<div class="h-wk-name">FitTrack App</div>
-<div class="h-wk-outcome">→ 4.8★ App Store week one</div>
-</div>
-</div>
-<div class="h-wk-card sm reveal d2" onclick="go('work')">
-<div class="h-wk-bg" style="background:linear-gradient(135deg,#150805,#2d1008,#4a1c0a)"></div>
-<div class="h-wk-ov"></div>
-<div class="h-wk-pill">SHOPIFY</div>
-<div class="h-wk-arrow">↗</div>
-<div class="h-wk-info">
-<div class="h-wk-cat">Web Development</div>
-<div class="h-wk-name">StyleVault Store</div>
-<div class="h-wk-outcome">→ 3× revenue after launch</div>
-</div>
-</div>
-<div class="h-wk-card sm reveal d3" onclick="go('work')">
-<div class="h-wk-bg" style="background:linear-gradient(135deg,#060f06,#0d2010,#1a3d1a)"></div>
-<div class="h-wk-ov"></div>
-<div class="h-wk-pill">BRAND</div>
-<div class="h-wk-arrow">↗</div>
-<div class="h-wk-info">
-<div class="h-wk-cat">Brand Identity</div>
-<div class="h-wk-name">NovaBrands Identity</div>
-<div class="h-wk-outcome">→ Delivered in 12 days</div>
-</div>
-</div>
-</div>
-</div>
-<div style="text-align:center;margin-top:52px">
-<a href="#" class="btn btn-ghost reveal" onclick="return go('work')">View All Projects →</a>
-</div>
-</section>
+  <!-- WORK PREVIEW -->
+  <section class="h-work">
+    <div class="h-work-head">
+      <div class="sec-tag reveal">// Selected Projects</div>
+      <h2 class="reveal d1">Work That <em>Moved the Needle</em></h2>
+    </div>
+    <div class="h-wk-grid">
+      <div class="h-wk-col">
+        <div class="h-wk-card tall reveal" onclick="go('work')">
+          <div class="h-wk-bg" style="background:linear-gradient(135deg,#0a1628,#1a2d4e,#112233)">
+            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.2;padding:40px">
+              <div style="width:100%;display:grid;grid-template-columns:repeat(5,1fr);gap:8px">
+                <div style="background:rgba(0,255,135,.4);height:28px;border-radius:4px;grid-column:span 5"></div>
+                <div style="background:rgba(0,255,135,.15);height:80px;border-radius:4px;grid-column:span 2"></div>
+                <div style="background:rgba(0,255,135,.08);height:80px;border-radius:4px;grid-column:span 3"></div>
+                <div style="background:rgba(0,255,135,.1);height:50px;border-radius:4px;grid-column:span 3"></div>
+                <div style="background:rgba(0,255,135,.06);height:50px;border-radius:4px;grid-column:span 2"></div>
+              </div>
+            </div>
+          </div>
+          <div class="h-wk-ov"></div>
+          <div class="h-wk-pill">DASHBOARD</div>
+          <div class="h-wk-arrow">↗</div>
+          <div class="h-wk-info">
+            <div class="h-wk-cat">UI/UX Design</div>
+            <div class="h-wk-name">Analytics Dashboard</div>
+            <div class="h-wk-outcome">→ 40% faster decisions</div>
+          </div>
+        </div>
+      </div>
+      <div class="h-wk-col">
+        <div class="h-wk-card mid reveal d1" onclick="go('work')">
+          <div class="h-wk-bg" style="background:linear-gradient(135deg,#0f0a1e,#1e0f3d,#2d1a5a)"></div>
+          <div class="h-wk-ov"></div>
+          <div class="h-wk-pill">APP</div>
+          <div class="h-wk-arrow">↗</div>
+          <div class="h-wk-info">
+            <div class="h-wk-cat">Mobile · iOS & Android</div>
+            <div class="h-wk-name">FitTrack App</div>
+            <div class="h-wk-outcome">→ 4.8★ App Store week one</div>
+          </div>
+        </div>
+        <div class="h-wk-card sm reveal d2" onclick="go('work')">
+          <div class="h-wk-bg" style="background:linear-gradient(135deg,#150805,#2d1008,#4a1c0a)"></div>
+          <div class="h-wk-ov"></div>
+          <div class="h-wk-pill">SHOPIFY</div>
+          <div class="h-wk-arrow">↗</div>
+          <div class="h-wk-info">
+            <div class="h-wk-cat">Web Development</div>
+            <div class="h-wk-name">StyleVault Store</div>
+            <div class="h-wk-outcome">→ 3× revenue after launch</div>
+          </div>
+        </div>
+        <div class="h-wk-card sm reveal d3" onclick="go('work')">
+          <div class="h-wk-bg" style="background:linear-gradient(135deg,#060f06,#0d2010,#1a3d1a)"></div>
+          <div class="h-wk-ov"></div>
+          <div class="h-wk-pill">BRAND</div>
+          <div class="h-wk-arrow">↗</div>
+          <div class="h-wk-info">
+            <div class="h-wk-cat">Brand Identity</div>
+            <div class="h-wk-name">NovaBrands Identity</div>
+            <div class="h-wk-outcome">→ Delivered in 12 days</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:52px">
+      <a href="#" class="btn btn-ghost reveal" onclick="return go('work')">View All Projects →</a>
+    </div>
+  </section>
 
-<!-- TECH STACK -->
-<div class="h-tech">
-<div class="h-tech-head">
-<div>
-<div class="sec-tag reveal">// Our Toolkit</div>
-<h2 class="h-tech-h reveal d1">Built with the right tools.</h2>
-</div>
-<p class="h-tech-sub reveal d2">We choose tools based on your project — not our comfort zone. Here's what we regularly work with.</p>
-</div>
-<div class="tech-pills reveal d2">
-<div class="tech-pill"><span class="tech-pill-dot"></span>Figma</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>React</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>React Native</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>Next.js</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>Node.js</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>WordPress</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>Shopify</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>Wix</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>Adobe Suite</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>Premiere Pro</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>After Effects</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>Flutter</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>Firebase</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>Framer</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>Webflow</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>MongoDB</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>Tailwind CSS</div>
-<div class="tech-pill"><span class="tech-pill-dot"></span>TypeScript</div>
-</div>
-</div>
+  <!-- TECH STACK -->
+  <div class="h-tech">
+    <div class="h-tech-head">
+      <div>
+        <div class="sec-tag reveal">// Our Toolkit</div>
+        <h2 class="h-tech-h reveal d1">Built with the right tools.</h2>
+      </div>
+      <p class="h-tech-sub reveal d2">We choose tools based on your project — not our comfort zone. Here's what we regularly work with.</p>
+    </div>
+    <div class="tech-pills reveal d2">
+      <div class="tech-pill"><span class="tech-pill-dot"></span>Figma</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>React</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>React Native</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>Next.js</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>Node.js</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>WordPress</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>Shopify</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>Wix</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>Adobe Suite</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>Premiere Pro</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>After Effects</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>Flutter</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>Firebase</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>Framer</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>Webflow</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>MongoDB</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>Tailwind CSS</div>
+      <div class="tech-pill"><span class="tech-pill-dot"></span>TypeScript</div>
+    </div>
+  </div>
 
-<!-- TESTIMONIALS -->
-<section class="h-testi">
-<div class="h-testi-head">
-<div class="sec-tag reveal">// Client Stories</div>
-<h2 class="h-testi-h reveal d1">Real words from<br><em>real people</em></h2>
-</div>
-<div class="testi-grid">
-<div class="testi-card reveal">
-<div class="testi-qmark">"</div>
-<p class="testi-txt">Gen-D transformed our online store completely. Sales tripled in the month after the redesign. The process was smooth from day one — they pushed back when we were wrong, and we're glad they did.</p>
-<div class="testi-auth">
-<div class="testi-av" style="background:#e84c1e;color:#fff">RK</div>
-<div>
-<div class="testi-name">Rahul Kumar</div>
-<div class="testi-role">Founder, StyleVault</div>
-<div class="testi-stars">★★★★★</div>
-</div>
-</div>
-</div>
-<div class="testi-card reveal d1">
-<div class="testi-qmark">"</div>
-<p class="testi-txt">4.8 stars on the App Store, first week. Clean design, fast performance. They genuinely understood what our users needed — not just what we asked for. Highly professional team.</p>
-<div class="testi-auth">
-<div class="testi-av" style="background:#7c3aed;color:#fff">SP</div>
-<div>
-<div class="testi-name">Sana Priya</div>
-<div class="testi-role">CEO, FitTrack</div>
-<div class="testi-stars">★★★★★</div>
-</div>
-</div>
-</div>
-<div class="testi-card reveal d2">
-<div class="testi-qmark">"</div>
-<p class="testi-txt">Best decision choosing Gen-D for our brand identity. They got the vision in the first call and delivered beyond what we imagined. I keep getting compliments on the logo months later.</p>
-<div class="testi-auth">
-<div class="testi-av" style="background:#0891b2;color:#fff">AM</div>
-<div>
-<div class="testi-name">Arjun Menon</div>
-<div class="testi-role">Director, NovaBrands</div>
-<div class="testi-stars">★★★★★</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+  <!-- TESTIMONIALS -->
+  <section class="h-testi">
+    <div class="h-testi-head">
+      <div class="sec-tag reveal">// Client Stories</div>
+      <h2 class="h-testi-h reveal d1">Real words from<br><em>real people</em></h2>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card reveal">
+        <div class="testi-qmark">"</div>
+        <p class="testi-txt">Gen-D transformed our online store completely. Sales tripled in the month after the redesign. The process was smooth from day one — they pushed back when we were wrong, and we're glad they did.</p>
+        <div class="testi-auth">
+          <div class="testi-av" style="background:#e84c1e;color:#fff">RK</div>
+          <div>
+            <div class="testi-name">Rahul Kumar</div>
+            <div class="testi-role">Founder, StyleVault</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal d1">
+        <div class="testi-qmark">"</div>
+        <p class="testi-txt">4.8 stars on the App Store, first week. Clean design, fast performance. They genuinely understood what our users needed — not just what we asked for. Highly professional team.</p>
+        <div class="testi-auth">
+          <div class="testi-av" style="background:#7c3aed;color:#fff">SP</div>
+          <div>
+            <div class="testi-name">Sana Priya</div>
+            <div class="testi-role">CEO, FitTrack</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card reveal d2">
+        <div class="testi-qmark">"</div>
+        <p class="testi-txt">Best decision choosing Gen-D for our brand identity. They got the vision in the first call and delivered beyond what we imagined. I keep getting compliments on the logo months later.</p>
+        <div class="testi-auth">
+          <div class="testi-av" style="background:#0891b2;color:#fff">AM</div>
+          <div>
+            <div class="testi-name">Arjun Menon</div>
+            <div class="testi-role">Director, NovaBrands</div>
+            <div class="testi-stars">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- LIVE STATS -->
-<div class="h-nums">
-<div class="h-num-box">
-<div class="h-num-n" id="cnt1">0<em>+</em></div>
-<div class="h-num-l">Happy Clients</div>
-<div class="h-num-desc">Real businesses, real partnerships — not one-time projects.</div>
-</div>
-<div class="h-num-box">
-<div class="h-num-n" id="cnt2">0<em>+</em></div>
-<div class="h-num-l">Projects Delivered</div>
-<div class="h-num-desc">From landing pages to complete app ecosystems.</div>
-</div>
-<div class="h-num-box">
-<div class="h-num-n"><em style="font-size:52px;font-style:normal;color:var(--acc)">24</em><em style="font-size:28px">h</em></div>
-<div class="h-num-l">Avg. Response Time</div>
-<div class="h-num-desc">Often much faster. Real people read every message.</div>
-</div>
-<div class="h-num-box">
-<div class="h-num-n" id="cnt4">0<em>★</em></div>
-<div class="h-num-l">Client Rating</div>
-<div class="h-num-desc">Every single client. We don't settle for anything less.</div>
-</div>
-</div>
+  <!-- LIVE STATS -->
+  <div class="h-nums">
+    <div class="h-num-box">
+      <div class="h-num-n" id="cnt1">0<em>+</em></div>
+      <div class="h-num-l">Happy Clients</div>
+      <div class="h-num-desc">Real businesses, real partnerships — not one-time projects.</div>
+    </div>
+    <div class="h-num-box">
+      <div class="h-num-n" id="cnt2">0<em>+</em></div>
+      <div class="h-num-l">Projects Delivered</div>
+      <div class="h-num-desc">From landing pages to complete app ecosystems.</div>
+    </div>
+    <div class="h-num-box">
+      <div class="h-num-n"><em style="font-size:52px;font-style:normal;color:var(--acc)">24</em><em style="font-size:28px">h</em></div>
+      <div class="h-num-l">Avg. Response Time</div>
+      <div class="h-num-desc">Often much faster. Real people read every message.</div>
+    </div>
+    <div class="h-num-box">
+      <div class="h-num-n" id="cnt4">0<em>★</em></div>
+      <div class="h-num-l">Client Rating</div>
+      <div class="h-num-desc">Every single client. We don't settle for anything less.</div>
+    </div>
+  </div>
 
-<!-- PROCESS -->
-<section class="h-proc">
-<div class="h-proc-head">
-<div>
-<div class="sec-tag reveal">// How We Work</div>
-<h2 class="h-proc-h reveal d1">Our process —<br>honest &amp; <em>direct.</em></h2>
-</div>
-<p class="h-proc-p reveal d2">We've refined this over 20+ projects. It's not a fancy framework — it's just how we work to make sure your project succeeds and you're never left in the dark.</p>
-</div>
-<div class="h-proc-steps">
-<div class="proc-step reveal" data-n="01">
-<div class="proc-conn">→</div>
-<div class="proc-dot">01</div>
-<div class="proc-step-h">Discovery</div>
-<p class="proc-step-p">We ask a lot of questions — the right ones. Deep dive into your brand, goals, audience and competitive landscape before a single pixel is placed.</p>
-</div>
-<div class="proc-step reveal d1" data-n="02">
-<div class="proc-conn">→</div>
-<div class="proc-dot">02</div>
-<div class="proc-step-h">Strategy</div>
-<p class="proc-step-p">Wireframes, tech stack, content structure. We map the plan so execution is smooth and every decision has a reason behind it.</p>
-</div>
-<div class="proc-step reveal d2" data-n="03">
-<div class="proc-conn">→</div>
-<div class="proc-dot">03</div>
-<div class="proc-step-h">Create</div>
-<p class="proc-step-p">We build with precision, sharing progress every step. You're in the loop — never wondering what's happening or when you'll see something.</p>
-</div>
-<div class="proc-step reveal d3" data-n="04">
-<div class="proc-dot">04</div>
-<div class="proc-step-h">Launch & Beyond</div>
-<p class="proc-step-p">We deploy, support you post-launch, and genuinely celebrate your wins. Your success doesn't end at handoff — it starts there.</p>
-</div>
-</div>
-</section>
+  <!-- PROCESS -->
+  <section class="h-proc">
+    <div class="h-proc-head">
+      <div>
+        <div class="sec-tag reveal">// How We Work</div>
+        <h2 class="h-proc-h reveal d1">Our process —<br>honest &amp; <em>direct.</em></h2>
+      </div>
+      <p class="h-proc-p reveal d2">We've refined this over 20+ projects. It's not a fancy framework — it's just how we work to make sure your project succeeds and you're never left in the dark.</p>
+    </div>
+    <div class="h-proc-steps">
+      <div class="proc-step reveal" data-n="01">
+        <div class="proc-conn">→</div>
+        <div class="proc-dot">01</div>
+        <div class="proc-step-h">Discovery</div>
+        <p class="proc-step-p">We ask a lot of questions — the right ones. Deep dive into your brand, goals, audience and competitive landscape before a single pixel is placed.</p>
+      </div>
+      <div class="proc-step reveal d1" data-n="02">
+        <div class="proc-conn">→</div>
+        <div class="proc-dot">02</div>
+        <div class="proc-step-h">Strategy</div>
+        <p class="proc-step-p">Wireframes, tech stack, content structure. We map the plan so execution is smooth and every decision has a reason behind it.</p>
+      </div>
+      <div class="proc-step reveal d2" data-n="03">
+        <div class="proc-conn">→</div>
+        <div class="proc-dot">03</div>
+        <div class="proc-step-h">Create</div>
+        <p class="proc-step-p">We build with precision, sharing progress every step. You're in the loop — never wondering what's happening or when you'll see something.</p>
+      </div>
+      <div class="proc-step reveal d3" data-n="04">
+        <div class="proc-dot">04</div>
+        <div class="proc-step-h">Launch & Beyond</div>
+        <p class="proc-step-p">We deploy, support you post-launch, and genuinely celebrate your wins. Your success doesn't end at handoff — it starts there.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- INSIGHTS -->
-<section class="h-insights">
-<div class="sec-tag reveal">// Thoughts &amp; Insights</div>
-<h2 class="reveal d1" style="font-family:var(--ff-disp);font-size:clamp(34px,4.5vw,58px);font-weight:800;line-height:.95;letter-spacing:-.025em">Things worth reading</h2>
-<div class="h-ins-grid">
-<div class="ins-card big reveal">
-<div class="ins-top">
-<div class="ins-cat">Design Thinking</div>
-<div class="ins-title big-title">Why "make it pop" is the most expensive phrase in design history</div>
-<p class="ins-body" style="margin-top:12px">Vague design briefs cost money, time, and trust. Here's how to communicate what you actually want — and get results that move your business.</p>
-</div>
-<div class="ins-foot">
-<div class="ins-meta">5 min read &nbsp;·&nbsp; Gen-D Blog</div>
-<div class="ins-arr">↗</div>
-</div>
-</div>
-<div style="display:flex;flex-direction:column;gap:20px">
-<div class="ins-card reveal d1">
-<div class="ins-top">
-<div class="ins-cat">Mobile UX</div>
-<div class="ins-title">The 3 mistakes that killed your app's retention before launch</div>
-</div>
-<div class="ins-foot">
-<div class="ins-meta">4 min read</div>
-<div class="ins-arr">↗</div>
-</div>
-</div>
-<div class="ins-card reveal d2">
-<div class="ins-top">
-<div class="ins-cat">Branding</div>
-<div class="ins-title">Logo ≠ brand. What actually makes your business recognisable</div>
-</div>
-<div class="ins-foot">
-<div class="ins-meta">3 min read</div>
-<div class="ins-arr">↗</div>
-</div>
-</div>
-<div class="ins-card reveal d3">
-<div class="ins-top">
-<div class="ins-cat">Web Dev</div>
-<div class="ins-title">Why your Shopify store is slow — and how to fix it in a weekend</div>
-</div>
-<div class="ins-foot">
-<div class="ins-meta">6 min read</div>
-<div class="ins-arr">↗</div>
-</div>
-</div>
-</div>
-</div>
-</section>
+  <!-- INSIGHTS -->
+  <section class="h-insights">
+    <div class="sec-tag reveal">// Thoughts &amp; Insights</div>
+    <h2 class="reveal d1" style="font-family:var(--ff-disp);font-size:clamp(34px,4.5vw,58px);font-weight:800;line-height:.95;letter-spacing:-.025em">Things worth reading</h2>
+    <div class="h-ins-grid">
+      <div class="ins-card big reveal">
+        <div class="ins-top">
+          <div class="ins-cat">Design Thinking</div>
+          <div class="ins-title big-title">Why "make it pop" is the most expensive phrase in design history</div>
+          <p class="ins-body" style="margin-top:12px">Vague design briefs cost money, time, and trust. Here's how to communicate what you actually want — and get results that move your business.</p>
+        </div>
+        <div class="ins-foot">
+          <div class="ins-meta">5 min read &nbsp;·&nbsp; Gen-D Blog</div>
+          <div class="ins-arr">↗</div>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="ins-card reveal d1">
+          <div class="ins-top">
+            <div class="ins-cat">Mobile UX</div>
+            <div class="ins-title">The 3 mistakes that killed your app's retention before launch</div>
+          </div>
+          <div class="ins-foot">
+            <div class="ins-meta">4 min read</div>
+            <div class="ins-arr">↗</div>
+          </div>
+        </div>
+        <div class="ins-card reveal d2">
+          <div class="ins-top">
+            <div class="ins-cat">Branding</div>
+            <div class="ins-title">Logo ≠ brand. What actually makes your business recognisable</div>
+          </div>
+          <div class="ins-foot">
+            <div class="ins-meta">3 min read</div>
+            <div class="ins-arr">↗</div>
+          </div>
+        </div>
+        <div class="ins-card reveal d3">
+          <div class="ins-top">
+            <div class="ins-cat">Web Dev</div>
+            <div class="ins-title">Why your Shopify store is slow — and how to fix it in a weekend</div>
+          </div>
+          <div class="ins-foot">
+            <div class="ins-meta">6 min read</div>
+            <div class="ins-arr">↗</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- FAQ -->
-<section class="h-faq">
-<div class="h-faq-inner">
-<div class="h-faq-l">
-<div class="sec-tag reveal">// FAQ</div>
-<h2 class="reveal d1">Questions<br>we get<br><em>a lot.</em></h2>
-<p class="reveal d2">Didn't find your answer? Just email us — Dinesh reads every one personally.</p>
-<a href="#" class="btn btn-acc reveal d3" style="margin-top:28px;width:fit-content" onclick="return go('contact')">Ask Us Directly →</a>
-</div>
-<div>
-<div class="faq-it reveal" onclick="toggleFaq(this)">
-<div class="faq-q">How long does a project take? <span class="faq-plus">+</span></div>
-<div class="faq-a">Websites: 1–4 weeks. A simple landing page? 3–5 days. Mobile apps: 6–12 weeks depending on scope. We give you a real timeline upfront — and we stick to it.</div>
-</div>
-<div class="faq-it reveal d1" onclick="toggleFaq(this)">
-<div class="faq-q">What's your payment structure? <span class="faq-plus">+</span></div>
-<div class="faq-a">50% upfront to begin, 50% on delivery. For larger projects, milestone-based payments are available. UPI, bank transfer, and international payments all accepted.</div>
-</div>
-<div class="faq-it reveal d2" onclick="toggleFaq(this)">
-<div class="faq-q">Do you work with international clients? <span class="faq-plus">+</span></div>
-<div class="faq-a">Absolutely. We work with clients across India and globally via WhatsApp, email, Zoom. Time zones haven't stopped us yet — and our work speaks for itself regardless of location.</div>
-</div>
-<div class="faq-it reveal d3" onclick="toggleFaq(this)">
-<div class="faq-q">What if I only have a rough idea? <span class="faq-plus">+</span></div>
-<div class="faq-a">Perfect — that's the ideal starting point. We're excellent at taking vague concepts and shaping them into clear briefs. Just reach out and we'll figure it out together, no pressure.</div>
-</div>
-<div class="faq-it reveal d4" onclick="toggleFaq(this)">
-<div class="faq-q">What if you're not the right fit for us? <span class="faq-plus">+</span></div>
-<div class="faq-a">We'll say so honestly — and point you toward someone who is. We'd rather you find the right team than take a project we can't do justice to. That's just how we operate.</div>
-</div>
-<div class="faq-it reveal d5" onclick="toggleFaq(this)">
-<div class="faq-q">Do you offer ongoing support? <span class="faq-plus">+</span></div>
-<div class="faq-a">Yes — 2 weeks of free post-launch support for bug fixes. Retainer packages for ongoing maintenance, updates, and new feature development are also available.</div>
-</div>
-</div>
-</div>
-</section>
+  <!-- FAQ -->
+  <section class="h-faq">
+    <div class="h-faq-inner">
+      <div class="h-faq-l">
+        <div class="sec-tag reveal">// FAQ</div>
+        <h2 class="reveal d1">Questions<br>we get<br><em>a lot.</em></h2>
+        <p class="reveal d2">Didn't find your answer? Just email us — Dinesh reads every one personally.</p>
+        <a href="#" class="btn btn-acc reveal d3" style="margin-top:28px;width:fit-content" onclick="return go('contact')">Ask Us Directly →</a>
+      </div>
+      <div>
+        <div class="faq-it reveal" onclick="toggleFaq(this)">
+          <div class="faq-q">How long does a project take? <span class="faq-plus">+</span></div>
+          <div class="faq-a">Websites: 1–4 weeks. A simple landing page? 3–5 days. Mobile apps: 6–12 weeks depending on scope. We give you a real timeline upfront — and we stick to it.</div>
+        </div>
+        <div class="faq-it reveal d1" onclick="toggleFaq(this)">
+          <div class="faq-q">What's your payment structure? <span class="faq-plus">+</span></div>
+          <div class="faq-a">50% upfront to begin, 50% on delivery. For larger projects, milestone-based payments are available. UPI, bank transfer, and international payments all accepted.</div>
+        </div>
+        <div class="faq-it reveal d2" onclick="toggleFaq(this)">
+          <div class="faq-q">Do you work with international clients? <span class="faq-plus">+</span></div>
+          <div class="faq-a">Absolutely. We work with clients across India and globally via WhatsApp, email, Zoom. Time zones haven't stopped us yet — and our work speaks for itself regardless of location.</div>
+        </div>
+        <div class="faq-it reveal d3" onclick="toggleFaq(this)">
+          <div class="faq-q">What if I only have a rough idea? <span class="faq-plus">+</span></div>
+          <div class="faq-a">Perfect — that's the ideal starting point. We're excellent at taking vague concepts and shaping them into clear briefs. Just reach out and we'll figure it out together, no pressure.</div>
+        </div>
+        <div class="faq-it reveal d4" onclick="toggleFaq(this)">
+          <div class="faq-q">What if you're not the right fit for us? <span class="faq-plus">+</span></div>
+          <div class="faq-a">We'll say so honestly — and point you toward someone who is. We'd rather you find the right team than take a project we can't do justice to. That's just how we operate.</div>
+        </div>
+        <div class="faq-it reveal d5" onclick="toggleFaq(this)">
+          <div class="faq-q">Do you offer ongoing support? <span class="faq-plus">+</span></div>
+          <div class="faq-a">Yes — 2 weeks of free post-launch support for bug fixes. Retainer packages for ongoing maintenance, updates, and new feature development are also available.</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<!-- CTA -->
-<section class="h-cta">
-<div class="h-cta-lines">
-<svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice">
-<line x1="0" y1="300" x2="1440" y2="300" stroke="#00ff87" stroke-width="1"/>
-<line x1="720" y1="0" x2="720" y2="600" stroke="#00ff87" stroke-width="1"/>
-<circle cx="720" cy="300" r="200" stroke="#00ff87" stroke-width="1" fill="none"/>
-<circle cx="720" cy="300" r="350" stroke="#00ff87" stroke-width="1" fill="none"/>
-</svg>
-</div>
-<div class="sec-tag reveal" style="justify-content:center">// Ready to be next?</div>
-<h2 class="h-cta-h reveal d1">You've got<br>something worth<br><em>building.</em></h2>
-<p class="h-cta-sub reveal d2">We read every message personally. No bots, no forms-into-the-void. <strong>A real reply from Dinesh</strong> within 24 hours — usually much faster.</p>
-<div class="h-cta-btns reveal d3">
-<a href="#" class="btn btn-acc" style="font-size:15px;padding:17px 40px" onclick="return go('contact')">Start Your Project →</a>
-<a href="mailto:gendcreative@gmail.com" class="btn btn-ghost" style="font-size:15px;padding:17px 40px">Email Us Directly</a>
-</div>
-<div class="h-cta-label reveal d4">Made with strong coffee and stronger opinions, in Chennai.</div>
-</section>
+  <!-- CTA -->
+  <section class="h-cta">
+    <div class="h-cta-lines">
+      <svg viewBox="0 0 1440 600" preserveAspectRatio="xMidYMid slice">
+        <line x1="0" y1="300" x2="1440" y2="300" stroke="#00ff87" stroke-width="1"/>
+        <line x1="720" y1="0" x2="720" y2="600" stroke="#00ff87" stroke-width="1"/>
+        <circle cx="720" cy="300" r="200" stroke="#00ff87" stroke-width="1" fill="none"/>
+        <circle cx="720" cy="300" r="350" stroke="#00ff87" stroke-width="1" fill="none"/>
+      </svg>
+    </div>
+    <div class="sec-tag reveal" style="justify-content:center">// Ready to be next?</div>
+    <h2 class="h-cta-h reveal d1">You've got<br>something worth<br><em>building.</em></h2>
+    <p class="h-cta-sub reveal d2">We read every message personally. No bots, no forms-into-the-void. <strong>A real reply from Dinesh</strong> within 24 hours — usually much faster.</p>
+    <div class="h-cta-btns reveal d3">
+      <a href="#" class="btn btn-acc" style="font-size:15px;padding:17px 40px" onclick="return go('contact')">Start Your Project →</a>
+      <a href="mailto:gendcreative@gmail.com" class="btn btn-ghost" style="font-size:15px;padding:17px 40px">Email Us Directly</a>
+    </div>
+    <div class="h-cta-label reveal d4">Made with strong coffee and stronger opinions, in Chennai.</div>
+  </section>
 
-<!-- FOOTER -->
-<footer class="site-footer">
-<div class="foot-grid">
-<div>
-<a href="#" class="nav-logo" onclick="return go('home')">
-<div class="logo-mark"><svg viewBox="0 0 34 34" fill="none"><rect x="7" y="7" width="20" height="20" rx="2" stroke="#00ff87" stroke-width="1.4" transform="rotate(45 17 17)"/><rect x="12" y="12" width="10" height="10" rx="1" fill="#00ff87" transform="rotate(45 17 17)"/><circle cx="17" cy="17" r="2.5" fill="#06060a"/></svg></div>
-<span class="nav-logo-txt">Gen<em>-D</em> Creative</span>
-</a>
-<p>Digital Design & Development Studio based in Chennai, India. Serving clients worldwide with design, development, and creative production.</p>
-<div class="foot-made">// Made with strong coffee and stronger opinions.</div>
-</div>
-<div class="foot-col">
-<h5>Pages</h5>
-<a href="#" onclick="return go('services')">Services</a>
-<a href="#" onclick="return go('about')">About</a>
-<a href="#" onclick="return go('work')">Work</a>
-<a href="#" onclick="return go('contact')">Contact</a>
-</div>
-<div class="foot-col">
-<h5>Services</h5>
-<a href="#">UI/UX Design</a>
-<a href="#">Web Development</a>
-<a href="#">Mobile Apps</a>
-<a href="#">Graphic Design</a>
-<a href="#">Video Editing</a>
-</div>
-<div class="foot-col">
-<h5>Say Hello</h5>
-<a href="mailto:gendcreative@gmail.com">gendcreative@gmail.com</a>
-<a href="tel:9790070152">9790070152</a>
-<a href="tel:9385732048">93857 32048</a>
-</div>
-</div>
-<div class="foot-bottom">
-<span class="foot-copy">© 2025 Gen-D Creative. All rights reserved.</span>
-<span class="foot-loc"><span class="foot-loc-dot"></span>Chennai, Tamil Nadu · Working Worldwide</span>
-</div>
-</footer>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="nav-logo" onclick="return go('home')">
+          <div class="logo-mark"><svg viewBox="0 0 34 34" fill="none"><rect x="7" y="7" width="20" height="20" rx="2" stroke="#00ff87" stroke-width="1.4" transform="rotate(45 17 17)"/><rect x="12" y="12" width="10" height="10" rx="1" fill="#00ff87" transform="rotate(45 17 17)"/><circle cx="17" cy="17" r="2.5" fill="#06060a"/></svg></div>
+          <span class="nav-logo-txt">Gen<em>-D</em> Creative</span>
+        </a>
+        <p>Digital Design & Development Studio based in Chennai, India. Serving clients worldwide with design, development, and creative production.</p>
+        <div class="foot-made">// Made with strong coffee and stronger opinions.</div>
+      </div>
+      <div class="foot-col">
+        <h5>Pages</h5>
+        <a href="#" onclick="return go('services')">Services</a>
+        <a href="#" onclick="return go('about')">About</a>
+        <a href="#" onclick="return go('work')">Work</a>
+        <a href="#" onclick="return go('contact')">Contact</a>
+      </div>
+      <div class="foot-col">
+        <h5>Services</h5>
+        <a href="#">UI/UX Design</a>
+        <a href="#">Web Development</a>
+        <a href="#">Mobile Apps</a>
+        <a href="#">Graphic Design</a>
+        <a href="#">Video Editing</a>
+      </div>
+      <div class="foot-col">
+        <h5>Say Hello</h5>
+        <a href="mailto:gendcreative@gmail.com">gendcreative@gmail.com</a>
+        <a href="tel:9790070152">9790070152</a>
+        <a href="tel:9385732048">93857 32048</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span class="foot-copy">© 2025 Gen-D Creative. All rights reserved.</span>
+      <span class="foot-loc"><span class="foot-loc-dot"></span>Chennai, Tamil Nadu · Working Worldwide</span>
+    </div>
+  </footer>
 </div>
 
 
 <!-- ═══════════════════════════════════
-   SERVICES PAGE
+     SERVICES PAGE
 ═══════════════════════════════════ -->
 <div class="pg" id="pg-services">
-<div class="sv-hero">
-<div class="sec-tag reveal">// What We Offer</div>
-<h1 class="sv-hero-h reveal d1">Here's what<br>we can do<br><em>for you.</em></h1>
-<p class="sv-hero-p reveal d2">We don't just execute tasks — we're the team that asks the awkward questions, pushes back when needed, and genuinely cares whether your project succeeds. <strong>Every service is designed with your outcome in mind, not our portfolio.</strong></p>
-</div>
-<div class="sv-list">
-<div class="sv-row reveal"><div class="sv-row-n">01</div><div><span style="font-size:28px;display:block;margin-bottom:14px">✦</span><div class="sv-row-name">UI/UX Design</div><p class="sv-row-desc">Interfaces that feel intuitive and look stunning. We design every pixel with purpose — wireframe to pixel-perfect Figma prototype. We've designed apps users couldn't stop using.</p><div class="sv-row-tags"><span class="sv-rtag">Mobile App</span><span class="sv-rtag">Website</span><span class="sv-rtag">Dashboard</span><span class="sv-rtag">Prototype</span><span class="sv-rtag">Design System</span></div></div><div class="sv-row-r"><div class="sv-rprice">₹8K<em>+</em></div><a href="#" class="sv-rlink" onclick="return go('contact')">Get Quote →</a></div></div>
-<div class="sv-row reveal d1"><div class="sv-row-n">02</div><div><span style="font-size:28px;display:block;margin-bottom:14px">◈</span><div class="sv-row-name">Web Development</div><p class="sv-row-desc">Fast, responsive, and scalable websites built on the right platform for you. From custom code to Shopify — we've tripled client revenue with smart web execution.</p><div class="sv-row-tags"><span class="sv-rtag">WordPress</span><span class="sv-rtag">Shopify</span><span class="sv-rtag">Custom Code</span><span class="sv-rtag">Wix</span><span class="sv-rtag">Webflow</span></div></div><div class="sv-row-r"><div class="sv-rprice">₹12K<em>+</em></div><a href="#" class="sv-rlink" onclick="return go('contact')">Get Quote →</a></div></div>
-<div class="sv-row reveal d2"><div class="sv-row-n">03</div><div><span style="font-size:28px;display:block;margin-bottom:14px">▷</span><div class="sv-row-name">Mobile App Development</div><p class="sv-row-desc">Native and cross-platform apps users actually love. Concept to App Store — design, development, deployment. 4.8★ on day one is our benchmark, not our ceiling.</p><div class="sv-row-tags"><span class="sv-rtag">iOS</span><span class="sv-rtag">Android</span><span class="sv-rtag">React Native</span><span class="sv-rtag">Flutter</span></div></div><div class="sv-row-r"><div class="sv-rprice">₹25K<em>+</em></div><a href="#" class="sv-rlink" onclick="return go('contact')">Get Quote →</a></div></div>
-<div class="sv-row reveal"><div class="sv-row-n">04</div><div><span style="font-size:28px;display:block;margin-bottom:14px">◇</span><div class="sv-row-name">Graphic Design</div><p class="sv-row-desc">Visual identity that makes your brand impossible to ignore. Logos, brand systems, social kits, print-ready files. NovaBrands' full identity — delivered in 12 days.</p><div class="sv-row-tags"><span class="sv-rtag">Logo</span><span class="sv-rtag">Brand Identity</span><span class="sv-rtag">Poster</span><span class="sv-rtag">Social Kit</span><span class="sv-rtag">Print</span></div></div><div class="sv-row-r"><div class="sv-rprice">₹3K<em>+</em></div><a href="#" class="sv-rlink" onclick="return go('contact')">Get Quote →</a></div></div>
-<div class="sv-row reveal d1"><div class="sv-row-n">05</div><div><span style="font-size:28px;display:block;margin-bottom:14px">⬡</span><div class="sv-row-name">Video Editing</div><p class="sv-row-desc">Compelling video that tells your story. Reels, brand videos, motion graphics, full post-production. Content that stops the scroll and actually converts.</p><div class="sv-row-tags"><span class="sv-rtag">Reels</span><span class="sv-rtag">Brand Video</span><span class="sv-rtag">Motion GFX</span><span class="sv-rtag">Product Demo</span></div></div><div class="sv-row-r"><div class="sv-rprice">₹2K<em>+</em></div><a href="#" class="sv-rlink" onclick="return go('contact')">Get Quote →</a></div></div>
-</div>
-<div class="sv-proc">
-<div class="sec-tag reveal">// How We Work</div>
-<h2 class="sv-proc-h reveal d1">Our process —<br>honest &amp; <em>direct.</em></h2>
-<div class="proc-grid">
-<div class="proc-step reveal" data-n="01"><div class="proc-dot">01</div><div class="proc-step-h">Discovery</div><p class="proc-step-p">We ask the right questions. Deep dive into your brand, goals, and audience before a pixel is placed.</p></div>
-<div class="proc-step reveal d1" data-n="02"><div class="proc-dot">02</div><div class="proc-step-h">Strategy</div><p class="proc-step-p">Wireframes, tech stack, content structure. A clear plan so every decision has a reason behind it.</p></div>
-<div class="proc-step reveal d2" data-n="03"><div class="proc-dot">03</div><div class="proc-step-h">Create</div><p class="proc-step-p">We build with precision, sharing progress throughout. You're always in the loop.</p></div>
-<div class="proc-step reveal d3" data-n="04"><div class="proc-dot">04</div><div class="proc-step-h">Launch & Support</div><p class="proc-step-p">Deploy, support post-launch, celebrate your wins. Your success starts at handoff.</p></div>
-</div>
-</div>
-<div class="sv-cta-band">
-<h2 class="reveal">Ready to turn<br>your idea into<br>something <em>real?</em></h2>
-<a href="#" class="btn btn-acc reveal d2" style="font-size:15px;padding:19px 44px;white-space:nowrap" onclick="return go('contact')">Yes, Let's Talk →</a>
-</div>
-<footer class="site-footer"><div class="foot-bottom" style="border-top:none;padding-top:0"><span class="foot-copy">© 2025 Gen-D Creative</span><span class="foot-loc"><span class="foot-loc-dot"></span>Chennai · Working Worldwide</span></div></footer>
+  <div class="sv-hero">
+    <div class="sec-tag reveal">// What We Offer</div>
+    <h1 class="sv-hero-h reveal d1">Here's what<br>we can do<br><em>for you.</em></h1>
+    <p class="sv-hero-p reveal d2">We don't just execute tasks — we're the team that asks the awkward questions, pushes back when needed, and genuinely cares whether your project succeeds. <strong>Every service is designed with your outcome in mind, not our portfolio.</strong></p>
+  </div>
+  <div class="sv-list">
+    <div class="sv-row reveal"><div class="sv-row-n">01</div><div><span style="font-size:28px;display:block;margin-bottom:14px">✦</span><div class="sv-row-name">UI/UX Design</div><p class="sv-row-desc">Interfaces that feel intuitive and look stunning. We design every pixel with purpose — wireframe to pixel-perfect Figma prototype. We've designed apps users couldn't stop using.</p><div class="sv-row-tags"><span class="sv-rtag">Mobile App</span><span class="sv-rtag">Website</span><span class="sv-rtag">Dashboard</span><span class="sv-rtag">Prototype</span><span class="sv-rtag">Design System</span></div></div><div class="sv-row-r"><div class="sv-rprice">₹8K<em>+</em></div><a href="#" class="sv-rlink" onclick="return go('contact')">Get Quote →</a></div></div>
+    <div class="sv-row reveal d1"><div class="sv-row-n">02</div><div><span style="font-size:28px;display:block;margin-bottom:14px">◈</span><div class="sv-row-name">Web Development</div><p class="sv-row-desc">Fast, responsive, and scalable websites built on the right platform for you. From custom code to Shopify — we've tripled client revenue with smart web execution.</p><div class="sv-row-tags"><span class="sv-rtag">WordPress</span><span class="sv-rtag">Shopify</span><span class="sv-rtag">Custom Code</span><span class="sv-rtag">Wix</span><span class="sv-rtag">Webflow</span></div></div><div class="sv-row-r"><div class="sv-rprice">₹12K<em>+</em></div><a href="#" class="sv-rlink" onclick="return go('contact')">Get Quote →</a></div></div>
+    <div class="sv-row reveal d2"><div class="sv-row-n">03</div><div><span style="font-size:28px;display:block;margin-bottom:14px">▷</span><div class="sv-row-name">Mobile App Development</div><p class="sv-row-desc">Native and cross-platform apps users actually love. Concept to App Store — design, development, deployment. 4.8★ on day one is our benchmark, not our ceiling.</p><div class="sv-row-tags"><span class="sv-rtag">iOS</span><span class="sv-rtag">Android</span><span class="sv-rtag">React Native</span><span class="sv-rtag">Flutter</span></div></div><div class="sv-row-r"><div class="sv-rprice">₹25K<em>+</em></div><a href="#" class="sv-rlink" onclick="return go('contact')">Get Quote →</a></div></div>
+    <div class="sv-row reveal"><div class="sv-row-n">04</div><div><span style="font-size:28px;display:block;margin-bottom:14px">◇</span><div class="sv-row-name">Graphic Design</div><p class="sv-row-desc">Visual identity that makes your brand impossible to ignore. Logos, brand systems, social kits, print-ready files. NovaBrands' full identity — delivered in 12 days.</p><div class="sv-row-tags"><span class="sv-rtag">Logo</span><span class="sv-rtag">Brand Identity</span><span class="sv-rtag">Poster</span><span class="sv-rtag">Social Kit</span><span class="sv-rtag">Print</span></div></div><div class="sv-row-r"><div class="sv-rprice">₹3K<em>+</em></div><a href="#" class="sv-rlink" onclick="return go('contact')">Get Quote →</a></div></div>
+    <div class="sv-row reveal d1"><div class="sv-row-n">05</div><div><span style="font-size:28px;display:block;margin-bottom:14px">⬡</span><div class="sv-row-name">Video Editing</div><p class="sv-row-desc">Compelling video that tells your story. Reels, brand videos, motion graphics, full post-production. Content that stops the scroll and actually converts.</p><div class="sv-row-tags"><span class="sv-rtag">Reels</span><span class="sv-rtag">Brand Video</span><span class="sv-rtag">Motion GFX</span><span class="sv-rtag">Product Demo</span></div></div><div class="sv-row-r"><div class="sv-rprice">₹2K<em>+</em></div><a href="#" class="sv-rlink" onclick="return go('contact')">Get Quote →</a></div></div>
+  </div>
+  <div class="sv-proc">
+    <div class="sec-tag reveal">// How We Work</div>
+    <h2 class="sv-proc-h reveal d1">Our process —<br>honest &amp; <em>direct.</em></h2>
+    <div class="proc-grid">
+      <div class="proc-step reveal" data-n="01"><div class="proc-dot">01</div><div class="proc-step-h">Discovery</div><p class="proc-step-p">We ask the right questions. Deep dive into your brand, goals, and audience before a pixel is placed.</p></div>
+      <div class="proc-step reveal d1" data-n="02"><div class="proc-dot">02</div><div class="proc-step-h">Strategy</div><p class="proc-step-p">Wireframes, tech stack, content structure. A clear plan so every decision has a reason behind it.</p></div>
+      <div class="proc-step reveal d2" data-n="03"><div class="proc-dot">03</div><div class="proc-step-h">Create</div><p class="proc-step-p">We build with precision, sharing progress throughout. You're always in the loop.</p></div>
+      <div class="proc-step reveal d3" data-n="04"><div class="proc-dot">04</div><div class="proc-step-h">Launch & Support</div><p class="proc-step-p">Deploy, support post-launch, celebrate your wins. Your success starts at handoff.</p></div>
+    </div>
+  </div>
+  <div class="sv-cta-band">
+    <h2 class="reveal">Ready to turn<br>your idea into<br>something <em>real?</em></h2>
+    <a href="#" class="btn btn-acc reveal d2" style="font-size:15px;padding:19px 44px;white-space:nowrap" onclick="return go('contact')">Yes, Let's Talk →</a>
+  </div>
+  <footer class="site-footer"><div class="foot-bottom" style="border-top:none;padding-top:0"><span class="foot-copy">© 2025 Gen-D Creative</span><span class="foot-loc"><span class="foot-loc-dot"></span>Chennai · Working Worldwide</span></div></footer>
 </div>
 
 
 <!-- ═══════════════════════════════════
-   ABOUT PAGE
+     ABOUT PAGE
 ═══════════════════════════════════ -->
 <div class="pg" id="pg-about">
-<div class="ab-hero">
-<h1 class="ab-hero-h reveal">We<br>Are<br><em>Gen-D</em></h1>
-<div class="ab-hero-r reveal d2">
-<p class="ab-intro">A <span>creative studio</span> born from frustration — fuelled by genuine craft.</p>
-<p class="ab-sub">We started Gen-D because we were tired of seeing great ideas get mediocre design. <strong>Three years later, we're still angry about it</strong> — and every project we touch proves that good design changes outcomes, not just aesthetics. Based in Chennai. Thinking globally. Working like we mean it.</p>
-<a href="#" class="btn btn-acc" onclick="return go('contact')" style="width:fit-content">Work With Us →</a>
-</div>
-</div>
-<div class="ab-nums">
-<div class="ab-num-box"><div class="ab-num-n" id="ab-cnt1">5<em>+</em></div><div class="ab-num-l">Happy Clients</div></div>
-<div class="ab-num-box"><div class="ab-num-n" id="ab-cnt2">20<em>+</em></div><div class="ab-num-l">Projects Delivered</div></div>
-<div class="ab-num-box"><div class="ab-num-n">3<em style="font-style:normal;color:var(--acc)">yrs</em></div><div class="ab-num-l">Years Active</div></div>
-<div class="ab-num-box"><div class="ab-num-n">5<em>★</em></div><div class="ab-num-l">Client Satisfaction</div></div>
-</div>
-<div class="ab-team">
-<div class="sec-tag reveal">// The Humans</div>
-<h2 class="ab-team-h reveal d1">People who'll actually<br>care about your project</h2>
-<div class="ab-team-grid">
-<div class="ab-tm reveal">
-<div class="ab-tm-vis"><div class="ab-tm-bg" style="background:linear-gradient(135deg,#0d0200,#2d0d00,#1a0800)"></div><div style="position:absolute;inset:0;background:radial-gradient(circle at 60% 40%,rgba(232,76,30,.22),transparent)"></div><div class="ab-tm-av" style="background:#e84c1e;color:#fff">D</div></div>
-<div class="ab-tm-body">
-<div class="ab-tm-name">Dinesh R.</div>
-<div class="ab-tm-role">Founder & Creative Director</div>
-<p class="ab-tm-bio">Leads strategy, client relationships, and the creative vision across every project. The one who starts every call by asking "but what do you actually want to achieve?"</p>
-<div class="ab-tm-personality">Starts mornings with three Notion tabs and <em>too much filter coffee.</em> Will stay up until 2am if a headline isn't quite right.</div>
-</div>
-</div>
-<div class="ab-tm reveal d1">
-<div class="ab-tm-vis"><div class="ab-tm-bg" style="background:linear-gradient(135deg,#07051a,#14103a,#1e1560)"></div><div style="position:absolute;inset:0;background:radial-gradient(circle at 40% 60%,rgba(124,58,237,.22),transparent)"></div><div class="ab-tm-av" style="background:#7c3aed;color:#fff">P</div></div>
-<div class="ab-tm-body">
-<div class="ab-tm-name">Priya S.</div>
-<div class="ab-tm-role">Lead UI/UX Designer</div>
-<p class="ab-tm-bio">Specialises in user-centred design systems and mobile interfaces. Figma power user and design-thinking advocate. The one responsible for that FitTrack 4.8★ rating.</p>
-<div class="ab-tm-personality">Has an opinion about every font. <em>Every single one.</em> Keeps a swipe file that's basically a design museum.</div>
-</div>
-</div>
-<div class="ab-tm reveal d2">
-<div class="ab-tm-vis"><div class="ab-tm-bg" style="background:linear-gradient(135deg,#001408,#002a10,#003d18)"></div><div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(8,145,178,.22),transparent)"></div><div class="ab-tm-av" style="background:#0891b2;color:#fff">K</div></div>
-<div class="ab-tm-body">
-<div class="ab-tm-name">Karthik M.</div>
-<div class="ab-tm-role">Lead Full-Stack Developer</div>
-<p class="ab-tm-bio">Builds fast, scalable web and mobile solutions. React, Node, Shopify expert. The person who turns Priya's beautiful designs into reality without breaking them.</p>
-<div class="ab-tm-personality">Clean code absolutist. <em>Will refactor first, ask questions later.</em> Secretly proud of every Lighthouse score above 95.</div>
-</div>
-</div>
-</div>
-</div>
-<div class="ab-values">
-<div class="sec-tag reveal">// Our Values</div>
-<h2 class="ab-val-h reveal d1">What we actually<br>stand <em>for</em></h2>
-<div class="ab-val-grid">
-<div class="ab-val reveal"><div class="ab-val-ico"><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div class="ab-val-name">We don't decorate. We solve.</div><p class="ab-val-desc">Every design decision has a reason. Beauty and function aren't a trade-off. If something looks great but doesn't work, we'll say so.</p></div>
+  <div class="ab-hero">
+    <h1 class="ab-hero-h reveal">We<br>Are<br><em>Gen-D</em></h1>
+    <div class="ab-hero-r reveal d2">
+      <p class="ab-intro">A <span>creative studio</span> born from frustration — fuelled by genuine craft.</p>
+      <p class="ab-sub">We started Gen-D because we were tired of seeing great ideas get mediocre design. <strong>Three years later, we're still angry about it</strong> — and every project we touch proves that good design changes outcomes, not just aesthetics. Based in Chennai. Thinking globally. Working like we mean it.</p>
+      <a href="#" class="btn btn-acc" onclick="return go('contact')" style="width:fit-content">Work With Us →</a>
+    </div>
+  </div>
+  <div class="ab-nums">
+    <div class="ab-num-box"><div class="ab-num-n" id="ab-cnt1">5<em>+</em></div><div class="ab-num-l">Happy Clients</div></div>
+    <div class="ab-num-box"><div class="ab-num-n" id="ab-cnt2">20<em>+</em></div><div class="ab-num-l">Projects Delivered</div></div>
+    <div class="ab-num-box"><div class="ab-num-n">3<em style="font-style:normal;color:var(--acc)">yrs</em></div><div class="ab-num-l">Years Active</div></div>
+    <div class="ab-num-box"><div class="ab-num-n">5<em>★</em></div><div class="ab-num-l">Client Satisfaction</div></div>
+  </div>
+  <div class="ab-team">
+    <div class="sec-tag reveal">// The Humans</div>
+    <h2 class="ab-team-h reveal d1">People who'll actually<br>care about your project</h2>
+    <div class="ab-team-grid">
+      <div class="ab-tm reveal">
+        <div class="ab-tm-vis"><div class="ab-tm-bg" style="background:linear-gradient(135deg,#0d0200,#2d0d00,#1a0800)"></div><div style="position:absolute;inset:0;background:radial-gradient(circle at 60% 40%,rgba(232,76,30,.22),transparent)"></div><div class="ab-tm-av" style="background:#e84c1e;color:#fff">D</div></div>
+        <div class="ab-tm-body">
+          <div class="ab-tm-name">Dinesh R.</div>
+          <div class="ab-tm-role">Founder & Creative Director</div>
+          <p class="ab-tm-bio">Leads strategy, client relationships, and the creative vision across every project. The one who starts every call by asking "but what do you actually want to achieve?"</p>
+          <div class="ab-tm-personality">Starts mornings with three Notion tabs and <em>too much filter coffee.</em> Will stay up until 2am if a headline isn't quite right.</div>
+        </div>
+      </div>
+      <div class="ab-tm reveal d1">
+        <div class="ab-tm-vis"><div class="ab-tm-bg" style="background:linear-gradient(135deg,#07051a,#14103a,#1e1560)"></div><div style="position:absolute;inset:0;background:radial-gradient(circle at 40% 60%,rgba(124,58,237,.22),transparent)"></div><div class="ab-tm-av" style="background:#7c3aed;color:#fff">P</div></div>
+        <div class="ab-tm-body">
+          <div class="ab-tm-name">Priya S.</div>
+          <div class="ab-tm-role">Lead UI/UX Designer</div>
+          <p class="ab-tm-bio">Specialises in user-centred design systems and mobile interfaces. Figma power user and design-thinking advocate. The one responsible for that FitTrack 4.8★ rating.</p>
+          <div class="ab-tm-personality">Has an opinion about every font. <em>Every single one.</em> Keeps a swipe file that's basically a design museum.</div>
+        </div>
+      </div>
+      <div class="ab-tm reveal d2">
+        <div class="ab-tm-vis"><div class="ab-tm-bg" style="background:linear-gradient(135deg,#001408,#002a10,#003d18)"></div><div style="position:absolute;inset:0;background:radial-gradient(circle at 50% 50%,rgba(8,145,178,.22),transparent)"></div><div class="ab-tm-av" style="background:#0891b2;color:#fff">K</div></div>
+        <div class="ab-tm-body">
+          <div class="ab-tm-name">Karthik M.</div>
+          <div class="ab-tm-role">Lead Full-Stack Developer</div>
+          <p class="ab-tm-bio">Builds fast, scalable web and mobile solutions. React, Node, Shopify expert. The person who turns Priya's beautiful designs into reality without breaking them.</p>
+          <div class="ab-tm-personality">Clean code absolutist. <em>Will refactor first, ask questions later.</em> Secretly proud of every Lighthouse score above 95.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ab-values">
+    <div class="sec-tag reveal">// Our Values</div>
+    <h2 class="ab-val-h reveal d1">What we actually<br>stand <em>for</em></h2>
+    <div class="ab-val-grid">
       <div class="ab-val reveal"><div class="ab-val-ico"><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div class="ab-val-name">We don't decorate. We solve.</div><p class="ab-val-desc">Every design decision has a reason. Beauty and function aren't a trade-off. If something looks great but doesn't work, we'll say so.</p></div>
-<div class="ab-val reveal"><div class="ab-val-ico"><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div></div><div class="ab-val-name">We don't decorate. We solve.</div><p class="ab-val-desc">Every design decision has a reason. Beauty and function aren't a trade-off. If something looks great but doesn't work, we'll say so.</p></div>
-<div class="ab-val reveal d1"><div class="ab-val-ico">🤝</div><div class="ab-val-name">We'll push back — because we care.</div><p class="ab-val-desc">We're not order-takers. A real partner tells you the truth, not just what you want to hear. We do it to protect your project.</p></div>
-<div class="ab-val reveal d2"><div class="ab-val-ico">⚡</div><div class="ab-val-name">Fast doesn't mean careless.</div><p class="ab-val-desc">We move fast. But we've built systems that let us deliver high quality on tight timelines. Speed and craft are not enemies.</p></div>
-<div class="ab-val reveal"><div class="ab-val-ico">🌍</div><div class="ab-val-name">Chennai roots. Global standards.</div><p class="ab-val-desc">We understand international design norms and build for audiences across cultures. Being from Chennai makes us prouder, not smaller.</p></div>
-<div class="ab-val reveal d1"><div class="ab-val-ico">🔍</div><div class="ab-val-name">No hidden costs. No vague timelines.</div><p class="ab-val-desc">Radical transparency isn't a policy — it's how we sleep at night. You'll always know what's happening and when.</p></div>
-<div class="ab-val reveal d2"><div class="ab-val-ico">📈</div><div class="ab-val-name">Your success is our success.</div><p class="ab-val-desc">We measure our work by your outcomes. If what we made didn't move your brand forward, we haven't done our job. It's that simple.</p></div>
-</div>
-</div>
-<div class="ab-story">
-<div class="ab-story-stick">
-<div class="sec-tag reveal">// Our Journey</div>
-<h2 class="ab-story-h reveal d1">How we<br>got <em>here</em></h2>
-</div>
-<div>
-<div class="ab-story-item reveal"><div class="ab-yr">2022</div><div><div class="ab-story-name">The Beginning</div><p class="ab-story-text">Gen-D founded in Chennai. First freelance project: ₹3,000. We probably overdelivered. <em>That's still how we operate.</em></p></div></div>
-<div class="ab-story-item reveal d1"><div class="ab-yr">2023</div><div><div class="ab-story-name">Expanding Services</div><p class="ab-story-text">10+ projects in. Expanded into UI/UX and mobile. Priya joined — everything immediately looked better. <em>She still doesn't let us forget that.</em></p></div></div>
-<div class="ab-story-item reveal d2"><div class="ab-yr">2024</div><div><div class="ab-story-name">Going Global</div><p class="ab-story-text">First international clients. Video production added. Karthik joined and our dev speed doubled. FitTrack launched 4.8★ day one. <em>Best day in the studio so far.</em></p></div></div>
-<div class="ab-story-item reveal"><div class="ab-yr">2025</div><div><div class="ab-story-name">Today & Beyond</div><p class="ab-story-text">Full-service studio. 5+ clients, 20+ projects. We still personally read every inquiry. We still overdeliver. <em>Some things shouldn't change.</em></p></div></div>
-</div>
-</div>
-<footer class="site-footer"><div class="foot-bottom" style="border-top:none;padding-top:0"><span class="foot-copy">© 2025 Gen-D Creative</span><span class="foot-loc"><span class="foot-loc-dot"></span>Chennai · Working Worldwide</span></div></footer>
+      <div class="ab-val reveal"><div class="ab-val-ico"><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div></div><div class="ab-val-name">We don't decorate. We solve.</div><p class="ab-val-desc">Every design decision has a reason. Beauty and function aren't a trade-off. If something looks great but doesn't work, we'll say so.</p></div>
+      <div class="ab-val reveal d1"><div class="ab-val-ico">🤝</div><div class="ab-val-name">We'll push back — because we care.</div><p class="ab-val-desc">We're not order-takers. A real partner tells you the truth, not just what you want to hear. We do it to protect your project.</p></div>
+      <div class="ab-val reveal d2"><div class="ab-val-ico">⚡</div><div class="ab-val-name">Fast doesn't mean careless.</div><p class="ab-val-desc">We move fast. But we've built systems that let us deliver high quality on tight timelines. Speed and craft are not enemies.</p></div>
+      <div class="ab-val reveal"><div class="ab-val-ico">🌍</div><div class="ab-val-name">Chennai roots. Global standards.</div><p class="ab-val-desc">We understand international design norms and build for audiences across cultures. Being from Chennai makes us prouder, not smaller.</p></div>
+      <div class="ab-val reveal d1"><div class="ab-val-ico">🔍</div><div class="ab-val-name">No hidden costs. No vague timelines.</div><p class="ab-val-desc">Radical transparency isn't a policy — it's how we sleep at night. You'll always know what's happening and when.</p></div>
+      <div class="ab-val reveal d2"><div class="ab-val-ico">📈</div><div class="ab-val-name">Your success is our success.</div><p class="ab-val-desc">We measure our work by your outcomes. If what we made didn't move your brand forward, we haven't done our job. It's that simple.</p></div>
+    </div>
+  </div>
+  <div class="ab-story">
+    <div class="ab-story-stick">
+      <div class="sec-tag reveal">// Our Journey</div>
+      <h2 class="ab-story-h reveal d1">How we<br>got <em>here</em></h2>
+    </div>
+    <div>
+      <div class="ab-story-item reveal"><div class="ab-yr">2022</div><div><div class="ab-story-name">The Beginning</div><p class="ab-story-text">Gen-D founded in Chennai. First freelance project: ₹3,000. We probably overdelivered. <em>That's still how we operate.</em></p></div></div>
+      <div class="ab-story-item reveal d1"><div class="ab-yr">2023</div><div><div class="ab-story-name">Expanding Services</div><p class="ab-story-text">10+ projects in. Expanded into UI/UX and mobile. Priya joined — everything immediately looked better. <em>She still doesn't let us forget that.</em></p></div></div>
+      <div class="ab-story-item reveal d2"><div class="ab-yr">2024</div><div><div class="ab-story-name">Going Global</div><p class="ab-story-text">First international clients. Video production added. Karthik joined and our dev speed doubled. FitTrack launched 4.8★ day one. <em>Best day in the studio so far.</em></p></div></div>
+      <div class="ab-story-item reveal"><div class="ab-yr">2025</div><div><div class="ab-story-name">Today & Beyond</div><p class="ab-story-text">Full-service studio. 5+ clients, 20+ projects. We still personally read every inquiry. We still overdeliver. <em>Some things shouldn't change.</em></p></div></div>
+    </div>
+  </div>
+  <footer class="site-footer"><div class="foot-bottom" style="border-top:none;padding-top:0"><span class="foot-copy">© 2025 Gen-D Creative</span><span class="foot-loc"><span class="foot-loc-dot"></span>Chennai · Working Worldwide</span></div></footer>
 </div>
 
 
 <!-- ═══════════════════════════════════
-   WORK PAGE
+     WORK PAGE
 ═══════════════════════════════════ -->
 <div class="pg" id="pg-work">
-<div class="wk-hero">
-<div class="sec-tag reveal">// Selected Projects</div>
-<h1 class="wk-hero-h reveal d1">Our<br><em>Work</em></h1>
-<p class="wk-hero-sub reveal d2">Every project is a story. Here are the brands and products we've helped bring to life — with real outcomes, not just pretty screenshots.</p>
-</div>
-<div class="wk-filter">
-<button class="wk-fbtn on" onclick="doFilter(this,'all')">All</button>
-<button class="wk-fbtn" onclick="doFilter(this,'ui')">UI/UX</button>
-<button class="wk-fbtn" onclick="doFilter(this,'web')">Web Dev</button>
-<button class="wk-fbtn" onclick="doFilter(this,'app')">Mobile</button>
-<button class="wk-fbtn" onclick="doFilter(this,'brand')">Branding</button>
-<button class="wk-fbtn" onclick="doFilter(this,'video')">Video</button>
-</div>
-<div class="wk-grid" id="wkGrid">
-<div class="wk-item span2 p1 reveal" data-cat="ui">
-<div class="wk-item-bg p1" style="position:absolute;inset:0"></div>
-<div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.2;padding:48px">
-<div style="width:100%;display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
-<div style="background:rgba(0,255,135,.5);height:30px;border-radius:4px;grid-column:span 5"></div>
-<div style="background:rgba(0,255,135,.2);height:90px;border-radius:4px;grid-column:span 2"></div>
-<div style="background:rgba(0,255,135,.1);height:90px;border-radius:4px;grid-column:span 3"></div>
-<div style="background:rgba(0,255,135,.15);height:54px;border-radius:4px;grid-column:span 3"></div>
-<div style="background:rgba(0,255,135,.08);height:54px;border-radius:4px;grid-column:span 2"></div>
-</div>
-</div>
-<div class="wk-item-ov"></div>
-<div class="wk-pill">DASHBOARD</div>
-<div class="wk-item-arrow">↗</div>
-<div class="wk-item-info">
-<div class="wk-item-cat">UI/UX Design</div>
-<div class="wk-item-name">E-Commerce Analytics Dashboard</div>
-<div class="wk-item-outcome">→ Client reduced decision time by 40%</div>
-<div class="wk-item-tags"><span class="wk-itag">Figma</span><span class="wk-itag">Dashboard</span><span class="wk-itag">Dark UI</span></div>
-</div>
-</div>
-<div class="wk-item p2 reveal d1" data-cat="app">
-<div class="wk-item-bg p2" style="position:absolute;inset:0"></div>
-<div class="wk-item-ov"></div>
-<div class="wk-pill">APP</div>
-<div class="wk-item-arrow">↗</div>
-<div class="wk-item-info">
-<div class="wk-item-cat">Mobile App · iOS & Android</div>
-<div class="wk-item-name">FitTrack — Fitness App</div>
-<div class="wk-item-outcome">→ 4.8★ App Store rating, week one</div>
-<div class="wk-item-tags"><span class="wk-itag">React Native</span><span class="wk-itag">iOS</span></div>
-</div>
-</div>
-<div class="wk-item p3 reveal d2" data-cat="web">
-<div class="wk-item-bg p3" style="position:absolute;inset:0"></div>
-<div class="wk-item-ov"></div>
-<div class="wk-pill">SHOPIFY</div>
-<div class="wk-item-arrow">↗</div>
-<div class="wk-item-info">
-<div class="wk-item-cat">Web Development · Shopify</div>
-<div class="wk-item-name">StyleVault — Fashion Store</div>
-<div class="wk-item-outcome">→ 3× revenue month after launch</div>
-<div class="wk-item-tags"><span class="wk-itag">Shopify</span><span class="wk-itag">E-Commerce</span></div>
-</div>
-</div>
-<div class="wk-item p4 reveal" data-cat="brand">
-<div class="wk-item-bg p4" style="position:absolute;inset:0"></div>
-<div class="wk-item-ov"></div>
-<div class="wk-pill">BRAND</div>
-<div class="wk-item-arrow">↗</div>
-<div class="wk-item-info">
-<div class="wk-item-cat">Brand Identity</div>
-<div class="wk-item-name">NovaBrands — Full Identity</div>
-<div class="wk-item-outcome">→ Delivered in 12 days flat</div>
-<div class="wk-item-tags"><span class="wk-itag">Logo</span><span class="wk-itag">Brand Book</span></div>
-</div>
-</div>
-<div class="wk-item p5 reveal d1" data-cat="video">
-<div class="wk-item-bg p5" style="position:absolute;inset:0"></div>
-<div class="wk-item-ov"></div>
-<div class="wk-pill">VIDEO</div>
-<div class="wk-item-arrow">↗</div>
-<div class="wk-item-info">
-<div class="wk-item-cat">Video Production</div>
-<div class="wk-item-name">Product Launch Campaign</div>
-<div class="wk-item-outcome">→ 2M+ organic reach</div>
-<div class="wk-item-tags"><span class="wk-itag">Reels</span><span class="wk-itag">Motion</span></div>
-</div>
-</div>
-<div class="wk-item p6 reveal d2" data-cat="ui">
-<div class="wk-item-bg p6" style="position:absolute;inset:0"></div>
-<div class="wk-item-ov"></div>
-<div class="wk-pill">FINTECH</div>
-<div class="wk-item-arrow">↗</div>
-<div class="wk-item-info">
-<div class="wk-item-cat">UI/UX Design · FinTech</div>
-<div class="wk-item-name">FinanceFlow — Banking UI</div>
-<div class="wk-item-outcome">→ 32% increase in user retention</div>
-<div class="wk-item-tags"><span class="wk-itag">Figma</span><span class="wk-itag">FinTech</span></div>
-</div>
-</div>
-</div>
-<div style="padding:80px 64px;text-align:center;background:var(--bg1);border-top:1px solid var(--brd)">
-<div class="sec-tag reveal" style="justify-content:center">// Ready to be next?</div>
-<h2 class="reveal d1" style="font-family:var(--ff-disp);font-weight:800;font-size:clamp(36px,5vw,72px);margin:14px 0 36px;line-height:.95;letter-spacing:-.025em">Let's Create Something<br><span style="color:var(--acc)">Worth Remembering</span></h2>
-<a href="#" class="btn btn-acc reveal d2" style="font-size:15px;padding:17px 42px" onclick="return go('contact')">Start Your Project →</a>
-</div>
-<footer class="site-footer"><div class="foot-bottom" style="border-top:none;padding-top:0"><span class="foot-copy">© 2025 Gen-D Creative</span><span class="foot-loc"><span class="foot-loc-dot"></span>Chennai · Working Worldwide</span></div></footer>
+  <div class="wk-hero">
+    <div class="sec-tag reveal">// Selected Projects</div>
+    <h1 class="wk-hero-h reveal d1">Our<br><em>Work</em></h1>
+    <p class="wk-hero-sub reveal d2">Every project is a story. Here are the brands and products we've helped bring to life — with real outcomes, not just pretty screenshots.</p>
+  </div>
+  <div class="wk-filter">
+    <button class="wk-fbtn on" onclick="doFilter(this,'all')">All</button>
+    <button class="wk-fbtn" onclick="doFilter(this,'ui')">UI/UX</button>
+    <button class="wk-fbtn" onclick="doFilter(this,'web')">Web Dev</button>
+    <button class="wk-fbtn" onclick="doFilter(this,'app')">Mobile</button>
+    <button class="wk-fbtn" onclick="doFilter(this,'brand')">Branding</button>
+    <button class="wk-fbtn" onclick="doFilter(this,'video')">Video</button>
+  </div>
+  <div class="wk-grid" id="wkGrid">
+    <div class="wk-item span2 p1 reveal" data-cat="ui">
+      <div class="wk-item-bg p1" style="position:absolute;inset:0"></div>
+      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.2;padding:48px">
+        <div style="width:100%;display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
+          <div style="background:rgba(0,255,135,.5);height:30px;border-radius:4px;grid-column:span 5"></div>
+          <div style="background:rgba(0,255,135,.2);height:90px;border-radius:4px;grid-column:span 2"></div>
+          <div style="background:rgba(0,255,135,.1);height:90px;border-radius:4px;grid-column:span 3"></div>
+          <div style="background:rgba(0,255,135,.15);height:54px;border-radius:4px;grid-column:span 3"></div>
+          <div style="background:rgba(0,255,135,.08);height:54px;border-radius:4px;grid-column:span 2"></div>
+        </div>
+      </div>
+      <div class="wk-item-ov"></div>
+      <div class="wk-pill">DASHBOARD</div>
+      <div class="wk-item-arrow">↗</div>
+      <div class="wk-item-info">
+        <div class="wk-item-cat">UI/UX Design</div>
+        <div class="wk-item-name">E-Commerce Analytics Dashboard</div>
+        <div class="wk-item-outcome">→ Client reduced decision time by 40%</div>
+        <div class="wk-item-tags"><span class="wk-itag">Figma</span><span class="wk-itag">Dashboard</span><span class="wk-itag">Dark UI</span></div>
+      </div>
+    </div>
+    <div class="wk-item p2 reveal d1" data-cat="app">
+      <div class="wk-item-bg p2" style="position:absolute;inset:0"></div>
+      <div class="wk-item-ov"></div>
+      <div class="wk-pill">APP</div>
+      <div class="wk-item-arrow">↗</div>
+      <div class="wk-item-info">
+        <div class="wk-item-cat">Mobile App · iOS & Android</div>
+        <div class="wk-item-name">FitTrack — Fitness App</div>
+        <div class="wk-item-outcome">→ 4.8★ App Store rating, week one</div>
+        <div class="wk-item-tags"><span class="wk-itag">React Native</span><span class="wk-itag">iOS</span></div>
+      </div>
+    </div>
+    <div class="wk-item p3 reveal d2" data-cat="web">
+      <div class="wk-item-bg p3" style="position:absolute;inset:0"></div>
+      <div class="wk-item-ov"></div>
+      <div class="wk-pill">SHOPIFY</div>
+      <div class="wk-item-arrow">↗</div>
+      <div class="wk-item-info">
+        <div class="wk-item-cat">Web Development · Shopify</div>
+        <div class="wk-item-name">StyleVault — Fashion Store</div>
+        <div class="wk-item-outcome">→ 3× revenue month after launch</div>
+        <div class="wk-item-tags"><span class="wk-itag">Shopify</span><span class="wk-itag">E-Commerce</span></div>
+      </div>
+    </div>
+    <div class="wk-item p4 reveal" data-cat="brand">
+      <div class="wk-item-bg p4" style="position:absolute;inset:0"></div>
+      <div class="wk-item-ov"></div>
+      <div class="wk-pill">BRAND</div>
+      <div class="wk-item-arrow">↗</div>
+      <div class="wk-item-info">
+        <div class="wk-item-cat">Brand Identity</div>
+        <div class="wk-item-name">NovaBrands — Full Identity</div>
+        <div class="wk-item-outcome">→ Delivered in 12 days flat</div>
+        <div class="wk-item-tags"><span class="wk-itag">Logo</span><span class="wk-itag">Brand Book</span></div>
+      </div>
+    </div>
+    <div class="wk-item p5 reveal d1" data-cat="video">
+      <div class="wk-item-bg p5" style="position:absolute;inset:0"></div>
+      <div class="wk-item-ov"></div>
+      <div class="wk-pill">VIDEO</div>
+      <div class="wk-item-arrow">↗</div>
+      <div class="wk-item-info">
+        <div class="wk-item-cat">Video Production</div>
+        <div class="wk-item-name">Product Launch Campaign</div>
+        <div class="wk-item-outcome">→ 2M+ organic reach</div>
+        <div class="wk-item-tags"><span class="wk-itag">Reels</span><span class="wk-itag">Motion</span></div>
+      </div>
+    </div>
+    <div class="wk-item p6 reveal d2" data-cat="ui">
+      <div class="wk-item-bg p6" style="position:absolute;inset:0"></div>
+      <div class="wk-item-ov"></div>
+      <div class="wk-pill">FINTECH</div>
+      <div class="wk-item-arrow">↗</div>
+      <div class="wk-item-info">
+        <div class="wk-item-cat">UI/UX Design · FinTech</div>
+        <div class="wk-item-name">FinanceFlow — Banking UI</div>
+        <div class="wk-item-outcome">→ 32% increase in user retention</div>
+        <div class="wk-item-tags"><span class="wk-itag">Figma</span><span class="wk-itag">FinTech</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="padding:80px 64px;text-align:center;background:var(--bg1);border-top:1px solid var(--brd)">
+    <div class="sec-tag reveal" style="justify-content:center">// Ready to be next?</div>
+    <h2 class="reveal d1" style="font-family:var(--ff-disp);font-weight:800;font-size:clamp(36px,5vw,72px);margin:14px 0 36px;line-height:.95;letter-spacing:-.025em">Let's Create Something<br><span style="color:var(--acc)">Worth Remembering</span></h2>
+    <a href="#" class="btn btn-acc reveal d2" style="font-size:15px;padding:17px 42px" onclick="return go('contact')">Start Your Project →</a>
+  </div>
+  <footer class="site-footer"><div class="foot-bottom" style="border-top:none;padding-top:0"><span class="foot-copy">© 2025 Gen-D Creative</span><span class="foot-loc"><span class="foot-loc-dot"></span>Chennai · Working Worldwide</span></div></footer>
 </div>
 
 
 <!-- ═══════════════════════════════════
-   CONTACT PAGE
+     CONTACT PAGE
 ═══════════════════════════════════ -->
 <div class="pg" id="pg-contact">
-<div class="ct-hero">
-<div>
-<div class="sec-tag reveal">// Get In Touch</div>
-<h1 class="ct-hero-h reveal d1">Let's<br><em>Talk</em></h1>
-<p class="ct-hero-sub reveal d2">We read every message personally. No bots, no forms-into-the-void. Just a <strong>real reply from Dinesh</strong> within 24 hours — often much faster.</p>
-</div>
-<div class="ct-hero-r reveal d2">
-<div class="ct-who-card">
-<div class="ct-who-tag">// Who reads your message</div>
-<div class="ct-who-row">
-<div class="ct-who-av">D</div>
-<div><div class="ct-who-name">Dinesh R.</div><div class="ct-who-role">Founder & Creative Director</div></div>
-</div>
-<p class="ct-who-txt">Your message comes directly to me. I review every inquiry and reply with <strong>an actual plan, not a generic quote.</strong></p>
-</div>
-<div class="ct-resp">
-<div class="ct-resp-l">Average response time</div>
-<div class="ct-resp-n">24h</div>
-</div>
-<div class="ct-contacts">
-<div class="ct-c-item"><div class="ct-c-ico">✉</div><a href="mailto:gendcreative@gmail.com" class="ct-c-val">gendcreative@gmail.com</a><span class="ct-c-hint">For inquiries</span></div>
-<div class="ct-c-item"><div class="ct-c-ico">☏</div><a href="tel:9790070152" class="ct-c-val">9790070152 / 93857 32048</a><span class="ct-c-hint">WhatsApp OK</span></div>
-<div class="ct-c-item"><div class="ct-c-ico">◎</div><span class="ct-c-val">Chennai · Working Worldwide</span><span class="ct-c-hint">Mon–Sat, 9–8 IST</span></div>
-</div>
-</div>
-</div>
-<div class="ct-form-wrap">
-<div class="sec-tag reveal">// Project Inquiry</div>
-<h2 class="ct-form-h reveal d1">Tell us about<br>your <em>project.</em></h2>
-<p class="ct-form-sub reveal d2">Fill in what you know. You don't need to have everything figured out — that's what the first call is for.</p>
+  <div class="ct-hero">
+    <div>
+      <div class="sec-tag reveal">// Get In Touch</div>
+      <h1 class="ct-hero-h reveal d1">Let's<br><em>Talk</em></h1>
+      <p class="ct-hero-sub reveal d2">We read every message personally. No bots, no forms-into-the-void. Just a <strong>real reply from Dinesh</strong> within 24 hours — often much faster.</p>
+    </div>
+    <div class="ct-hero-r reveal d2">
+      <div class="ct-who-card">
+        <div class="ct-who-tag">// Who reads your message</div>
+        <div class="ct-who-row">
+          <div class="ct-who-av">D</div>
+          <div><div class="ct-who-name">Dinesh R.</div><div class="ct-who-role">Founder & Creative Director</div></div>
+        </div>
+        <p class="ct-who-txt">Your message comes directly to me. I review every inquiry and reply with <strong>an actual plan, not a generic quote.</strong></p>
+      </div>
+      <div class="ct-resp">
+        <div class="ct-resp-l">Average response time</div>
+        <div class="ct-resp-n">24h</div>
+      </div>
+      <div class="ct-contacts">
+        <div class="ct-c-item"><div class="ct-c-ico">✉</div><a href="mailto:gendcreative@gmail.com" class="ct-c-val">gendcreative@gmail.com</a><span class="ct-c-hint">For inquiries</span></div>
+        <div class="ct-c-item"><div class="ct-c-ico">☏</div><a href="tel:9790070152" class="ct-c-val">9790070152 / 93857 32048</a><span class="ct-c-hint">WhatsApp OK</span></div>
+        <div class="ct-c-item"><div class="ct-c-ico">◎</div><span class="ct-c-val">Chennai · Working Worldwide</span><span class="ct-c-hint">Mon–Sat, 9–8 IST</span></div>
+      </div>
+    </div>
+  </div>
+  <div class="ct-form-wrap">
+    <div class="sec-tag reveal">// Project Inquiry</div>
+    <h2 class="ct-form-h reveal d1">Tell us about<br>your <em>project.</em></h2>
+    <p class="ct-form-sub reveal d2">Fill in what you know. You don't need to have everything figured out — that's what the first call is for.</p>
 
-<form class="ct-form reveal d2" id="ctForm" action="https://api.web3forms.com/submit" method="POST">
-<input type="hidden" name="access_key" value="0d2ed456-dde6-472e-88f5-c2d5a6e0ac72">
-<input type="hidden" name="subject" value="New Project Inquiry — Gen-D Creative">
-<input type="hidden" name="from_name" value="Gen-D Creative Website">
-<input type="hidden" name="services" id="servicesField" value="">
+    <form class="ct-form reveal d2" id="ctForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="0d2ed456-dde6-472e-88f5-c2d5a6e0ac72">
+      <input type="hidden" name="subject" value="New Project Inquiry — Gen-D Creative">
+      <input type="hidden" name="from_name" value="Gen-D Creative Website">
+      <input type="hidden" name="services" id="servicesField" value="">
 
-<div class="ct-row">
-<div class="ct-fg">
-<label class="ct-lbl">Full Name *</label>
-<input type="text" class="ct-inp" placeholder="Your name" id="cf-name" name="name" required>
-</div>
-<div class="ct-fg">
-<label class="ct-lbl">Email Address *</label>
-<input type="email" class="ct-inp" placeholder="you@email.com" id="cf-email" name="email" required>
-</div>
-</div>
+      <div class="ct-row">
+        <div class="ct-fg">
+          <label class="ct-lbl">Full Name *</label>
+          <input type="text" class="ct-inp" placeholder="Your name" id="cf-name" name="name" required>
+        </div>
+        <div class="ct-fg">
+          <label class="ct-lbl">Email Address *</label>
+          <input type="email" class="ct-inp" placeholder="you@email.com" id="cf-email" name="email" required>
+        </div>
+      </div>
 
-<div class="ct-row">
-<div class="ct-fg">
-<label class="ct-lbl">Phone / WhatsApp</label>
-<input type="tel" class="ct-inp" placeholder="+91 98765 43210" name="phone" id="cf-phone">
-</div>
-<div class="ct-fg">
-<label class="ct-lbl">Company / Brand</label>
-<input type="text" class="ct-inp" placeholder="Your company name" name="company" id="cf-company">
-</div>
-</div>
+      <div class="ct-row">
+        <div class="ct-fg">
+          <label class="ct-lbl">Phone / WhatsApp</label>
+          <input type="tel" class="ct-inp" placeholder="+91 98765 43210" name="phone" id="cf-phone">
+        </div>
+        <div class="ct-fg">
+          <label class="ct-lbl">Company / Brand</label>
+          <input type="text" class="ct-inp" placeholder="Your company name" name="company" id="cf-company">
+        </div>
+      </div>
 
-<div class="ct-fg">
-<label class="ct-lbl">What do you need? *</label>
-<div class="chips" id="cf-chips">
-<div class="chip" onclick="toggleChip(this)">UI/UX Design</div>
-<div class="chip" onclick="toggleChip(this)">Web Development</div>
-<div class="chip" onclick="toggleChip(this)">Mobile App</div>
-<div class="chip" onclick="toggleChip(this)">Graphic Design</div>
-<div class="chip" onclick="toggleChip(this)">Video Editing</div>
-<div class="chip" onclick="toggleChip(this)">Full Package</div>
-</div>
-</div>
+      <div class="ct-fg">
+        <label class="ct-lbl">What do you need? *</label>
+        <div class="chips" id="cf-chips">
+          <div class="chip" onclick="toggleChip(this)">UI/UX Design</div>
+          <div class="chip" onclick="toggleChip(this)">Web Development</div>
+          <div class="chip" onclick="toggleChip(this)">Mobile App</div>
+          <div class="chip" onclick="toggleChip(this)">Graphic Design</div>
+          <div class="chip" onclick="toggleChip(this)">Video Editing</div>
+          <div class="chip" onclick="toggleChip(this)">Full Package</div>
+        </div>
+      </div>
 
-<div class="ct-row">
-<div class="ct-fg">
-<label class="ct-lbl">Estimated Budget</label>
-<select class="ct-sel" id="cf-budget" name="budget">
-<option value="" disabled selected>Select a range</option>
-<option>Under ₹5,000</option>
-<option>₹5,000 – ₹15,000</option>
-<option>₹15,000 – ₹50,000</option>
-<option>₹50,000 – ₹1,00,000</option>
-<option>₹1,00,000+</option>
-</select>
-</div>
-<div class="ct-fg">
-<label class="ct-lbl">Timeline</label>
-<select class="ct-sel" id="cf-timeline" name="timeline">
-<option value="" disabled selected>When do you need it?</option>
-<option>ASAP (1–2 weeks)</option>
-<option>Within a month</option>
-<option>1–3 months</option>
-<option>Flexible</option>
-</select>
-</div>
-</div>
+      <div class="ct-row">
+        <div class="ct-fg">
+          <label class="ct-lbl">Estimated Budget</label>
+          <select class="ct-sel" id="cf-budget" name="budget">
+            <option value="" disabled selected>Select a range</option>
+            <option>Under ₹5,000</option>
+            <option>₹5,000 – ₹15,000</option>
+            <option>₹15,000 – ₹50,000</option>
+            <option>₹50,000 – ₹1,00,000</option>
+            <option>₹1,00,000+</option>
+          </select>
+        </div>
+        <div class="ct-fg">
+          <label class="ct-lbl">Timeline</label>
+          <select class="ct-sel" id="cf-timeline" name="timeline">
+            <option value="" disabled selected>When do you need it?</option>
+            <option>ASAP (1–2 weeks)</option>
+            <option>Within a month</option>
+            <option>1–3 months</option>
+            <option>Flexible</option>
+          </select>
+        </div>
+      </div>
 
-<div class="ct-row full">
-<div class="ct-fg">
-<label class="ct-lbl">Describe your project *</label>
-<textarea class="ct-ta" id="cf-desc" name="message" required placeholder="Tell us what you're building, who it's for, your goals, and any references. A rough idea is a great starting point — we love shaping those into something real..."></textarea>
-</div>
-</div>
+      <div class="ct-row full">
+        <div class="ct-fg">
+          <label class="ct-lbl">Describe your project *</label>
+          <textarea class="ct-ta" id="cf-desc" name="message" required placeholder="Tell us what you're building, who it's for, your goals, and any references. A rough idea is a great starting point — we love shaping those into something real..."></textarea>
+        </div>
+      </div>
 
-<div class="ct-sub-row">
-<p class="ct-agree">By submitting, you agree to our Privacy Policy. We never share your details with anyone.</p>
-<button class="sub-btn" type="submit">Send Message <div class="sub-ico">→</div></button>
-</div>
-</form>
+      <div class="ct-sub-row">
+        <p class="ct-agree">By submitting, you agree to our Privacy Policy. We never share your details with anyone.</p>
+        <button class="sub-btn" type="submit">Send Message <div class="sub-ico">→</div></button>
+      </div>
+    </form>
 
-<div class="ct-success" id="ctSuccess">
-<h3>Message Sent ✓</h3>
-<p>Got it! We're already thinking about your project.<br>Expect a personal reply from Dinesh by tomorrow.<br><br>In the meantime, WhatsApp us at <strong style="color:var(--acc)">9790070152</strong></p>
-</div>
-</div>
+    <div class="ct-success" id="ctSuccess">
+      <h3>Message Sent ✓</h3>
+      <p>Got it! We're already thinking about your project.<br>Expect a personal reply from Dinesh by tomorrow.<br><br>In the meantime, WhatsApp us at <strong style="color:var(--acc)">9790070152</strong></p>
+    </div>
+  </div>
 
-<div class="ct-faq">
-<h2 class="ct-faq-h reveal">Frequently <em>Asked</em></h2>
-<div class="faq-2col reveal d1">
-<div>
-<div class="faq-it" onclick="toggleFaq(this)"><div class="faq-q">How long does a website take? <span class="faq-plus">+</span></div><div class="faq-a">Most websites take 1–4 weeks. A simple landing page can be done in 3–5 days. We give you a clear timeline before we start — and we stick to it.</div></div>
-<div class="faq-it" onclick="toggleFaq(this)"><div class="faq-q">Do you work internationally? <span class="faq-plus">+</span></div><div class="faq-a">Absolutely. We work with clients across India and worldwide via WhatsApp, email, Zoom. Time zone differences haven't stopped us yet.</div></div>
-<div class="faq-it" onclick="toggleFaq(this)"><div class="faq-q">What's your payment process? <span class="faq-plus">+</span></div><div class="faq-a">50% upfront to begin, 50% on delivery. For larger projects, milestone-based payments are available. UPI, bank transfer, and international payments accepted.</div></div>
-</div>
-<div>
-<div class="faq-it" onclick="toggleFaq(this)"><div class="faq-q">What if I only have a rough idea? <span class="faq-plus">+</span></div><div class="faq-a">Perfect — that's actually the ideal starting point. We're great at taking vague concepts and shaping them into clear, actionable briefs. Just reach out.</div></div>
-<div class="faq-it" onclick="toggleFaq(this)"><div class="faq-q">Do you offer post-launch support? <span class="faq-plus">+</span></div><div class="faq-a">2 weeks of free post-launch support for bug fixes and small changes. Ongoing maintenance and retainer packages also available.</div></div>
-<div class="faq-it" onclick="toggleFaq(this)"><div class="faq-q">What if you're not the right fit? <span class="faq-plus">+</span></div><div class="faq-a">We'll tell you honestly — and point you toward someone who is. We'd rather you get the right team than take a project we can't do justice to.</div></div>
-</div>
-</div>
-</div>
-<footer class="site-footer">
-<div class="foot-grid">
-<div>
-<a href="#" class="nav-logo" onclick="return go('home')"><div class="logo-mark"><svg viewBox="0 0 34 34" fill="none"><rect x="7" y="7" width="20" height="20" rx="2" stroke="#00ff87" stroke-width="1.4" transform="rotate(45 17 17)"/><rect x="12" y="12" width="10" height="10" rx="1" fill="#00ff87" transform="rotate(45 17 17)"/><circle cx="17" cy="17" r="2.5" fill="#06060a"/></svg></div><span class="nav-logo-txt">Gen<em>-D</em> Creative</span></a>
-<p>Digital Design & Development Studio based in Chennai, India. Serving clients worldwide.</p>
-<div class="foot-made">// Made with strong coffee and stronger opinions.</div>
-</div>
-<div class="foot-col"><h5>Pages</h5><a href="#" onclick="return go('services')">Services</a><a href="#" onclick="return go('about')">About</a><a href="#" onclick="return go('work')">Work</a><a href="#" onclick="return go('contact')">Contact</a></div>
-<div class="foot-col"><h5>Services</h5><a href="#">UI/UX Design</a><a href="#">Web Development</a><a href="#">Mobile Apps</a><a href="#">Graphic Design</a><a href="#">Video Editing</a></div>
-<div class="foot-col"><h5>Say Hello</h5><a href="mailto:gendcreative@gmail.com">gendcreative@gmail.com</a><a href="tel:9790070152">9790070152</a><a href="tel:9385732048">93857 32048</a></div>
-</div>
-<div class="foot-bottom"><span class="foot-copy">© 2025 Gen-D Creative. All rights reserved.</span><span class="foot-loc"><span class="foot-loc-dot"></span>Chennai, Tamil Nadu · Working Worldwide</span></div>
-</footer>
+  <div class="ct-faq">
+    <h2 class="ct-faq-h reveal">Frequently <em>Asked</em></h2>
+    <div class="faq-2col reveal d1">
+      <div>
+        <div class="faq-it" onclick="toggleFaq(this)"><div class="faq-q">How long does a website take? <span class="faq-plus">+</span></div><div class="faq-a">Most websites take 1–4 weeks. A simple landing page can be done in 3–5 days. We give you a clear timeline before we start — and we stick to it.</div></div>
+        <div class="faq-it" onclick="toggleFaq(this)"><div class="faq-q">Do you work internationally? <span class="faq-plus">+</span></div><div class="faq-a">Absolutely. We work with clients across India and worldwide via WhatsApp, email, Zoom. Time zone differences haven't stopped us yet.</div></div>
+        <div class="faq-it" onclick="toggleFaq(this)"><div class="faq-q">What's your payment process? <span class="faq-plus">+</span></div><div class="faq-a">50% upfront to begin, 50% on delivery. For larger projects, milestone-based payments are available. UPI, bank transfer, and international payments accepted.</div></div>
+      </div>
+      <div>
+        <div class="faq-it" onclick="toggleFaq(this)"><div class="faq-q">What if I only have a rough idea? <span class="faq-plus">+</span></div><div class="faq-a">Perfect — that's actually the ideal starting point. We're great at taking vague concepts and shaping them into clear, actionable briefs. Just reach out.</div></div>
+        <div class="faq-it" onclick="toggleFaq(this)"><div class="faq-q">Do you offer post-launch support? <span class="faq-plus">+</span></div><div class="faq-a">2 weeks of free post-launch support for bug fixes and small changes. Ongoing maintenance and retainer packages also available.</div></div>
+        <div class="faq-it" onclick="toggleFaq(this)"><div class="faq-q">What if you're not the right fit? <span class="faq-plus">+</span></div><div class="faq-a">We'll tell you honestly — and point you toward someone who is. We'd rather you get the right team than take a project we can't do justice to.</div></div>
+      </div>
+    </div>
+  </div>
+  <footer class="site-footer">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="nav-logo" onclick="return go('home')"><div class="logo-mark"><svg viewBox="0 0 34 34" fill="none"><rect x="7" y="7" width="20" height="20" rx="2" stroke="#00ff87" stroke-width="1.4" transform="rotate(45 17 17)"/><rect x="12" y="12" width="10" height="10" rx="1" fill="#00ff87" transform="rotate(45 17 17)"/><circle cx="17" cy="17" r="2.5" fill="#06060a"/></svg></div><span class="nav-logo-txt">Gen<em>-D</em> Creative</span></a>
+        <p>Digital Design & Development Studio based in Chennai, India. Serving clients worldwide.</p>
+        <div class="foot-made">// Made with strong coffee and stronger opinions.</div>
+      </div>
+      <div class="foot-col"><h5>Pages</h5><a href="#" onclick="return go('services')">Services</a><a href="#" onclick="return go('about')">About</a><a href="#" onclick="return go('work')">Work</a><a href="#" onclick="return go('contact')">Contact</a></div>
+      <div class="foot-col"><h5>Services</h5><a href="#">UI/UX Design</a><a href="#">Web Development</a><a href="#">Mobile Apps</a><a href="#">Graphic Design</a><a href="#">Video Editing</a></div>
+      <div class="foot-col"><h5>Say Hello</h5><a href="mailto:gendcreative@gmail.com">gendcreative@gmail.com</a><a href="tel:9790070152">9790070152</a><a href="tel:9385732048">93857 32048</a></div>
+    </div>
+    <div class="foot-bottom"><span class="foot-copy">© 2025 Gen-D Creative. All rights reserved.</span><span class="foot-loc"><span class="foot-loc-dot"></span>Chennai, Tamil Nadu · Working Worldwide</span></div>
+  </footer>
 </div>
 
 
@@ -1663,8 +1601,8 @@ document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.le
 document.addEventListener('mousedown',()=>document.body.classList.add('click'));
 document.addEventListener('mouseup',()=>document.body.classList.remove('click'));
 document.querySelectorAll('a,button,.sv-acc-card,.ab-tm,.testi-card,.why-item,.stat-box,.h-wk-card,.tech-pill,.h-num-box,.proc-step,.ins-card,.faq-it,.chip,.wk-fbtn,.wk-item,.ct-c-item,.ab-val,.ab-num-box,.sv-row').forEach(el=>{
-el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
-el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
+  el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));
+  el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));
 });
 
 /* ─── NAV SCROLL ─── */
@@ -1672,121 +1610,121 @@ window.addEventListener('scroll',()=>document.getElementById('nav').classList.to
 
 /* ─── PAGE ROUTER ─── */
 function go(id){
-document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
-document.getElementById('pg-'+id).classList.add('on');
-document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('act'));
-const nl=document.getElementById('nl-'+id);
-if(nl)nl.classList.add('act');
-window.scrollTo({top:0,behavior:'instant'});
-setTimeout(kickReveal,60);
-if(id==='home')setTimeout(startHomeCounters,500);
-return false;
+  document.querySelectorAll('.pg').forEach(p=>p.classList.remove('on'));
+  document.getElementById('pg-'+id).classList.add('on');
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.remove('act'));
+  const nl=document.getElementById('nl-'+id);
+  if(nl)nl.classList.add('act');
+  window.scrollTo({top:0,behavior:'instant'});
+  setTimeout(kickReveal,60);
+  if(id==='home')setTimeout(startHomeCounters,500);
+  return false;
 }
 
 /* ─── SCROLL REVEAL ─── */
 let revObs;
 function kickReveal(){
-if(revObs)revObs.disconnect();
-revObs=new IntersectionObserver(entries=>{
-entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')});
-},{threshold:.07});
-document.querySelectorAll('.pg.on .reveal').forEach(el=>{el.classList.remove('vis');revObs.observe(el)});
+  if(revObs)revObs.disconnect();
+  revObs=new IntersectionObserver(entries=>{
+    entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')});
+  },{threshold:.07});
+  document.querySelectorAll('.pg.on .reveal').forEach(el=>{el.classList.remove('vis');revObs.observe(el)});
 }
 kickReveal();
 
 /* ─── HERO CANVAS ─── */
 (()=>{
-const c=document.getElementById('heroCanvas');
-if(!c)return;
-const ctx=c.getContext('2d');
-let W,H,pts=[],mx2=window.innerWidth/2,my2=window.innerHeight/2;
-const resize=()=>{W=c.width=c.offsetWidth;H=c.height=c.offsetHeight};
-resize();window.addEventListener('resize',resize);
-document.addEventListener('mousemove',e=>{mx2=e.clientX;my2=e.clientY});
-// particles
-for(let i=0;i<70;i++)pts.push({
-x:Math.random()*100,y:Math.random()*100,
-vx:(Math.random()-.5)*.01,vy:(Math.random()-.5)*.01,
-r:Math.random()*1.6+.3,
-a:Math.random()*.3+.06,
-col:Math.random()<.2?'0,255,135':Math.random()<.25?'255,101,53':'238,234,224',
-pulse:Math.random()*Math.PI*2,ps:Math.random()*.02+.01
-});
-// grid dots
-const gridDots=[];
-for(let gx=0;gx<=12;gx++)for(let gy=0;gy<=8;gy++)gridDots.push({px:gx/12,py:gy/8});
+  const c=document.getElementById('heroCanvas');
+  if(!c)return;
+  const ctx=c.getContext('2d');
+  let W,H,pts=[],mx2=window.innerWidth/2,my2=window.innerHeight/2;
+  const resize=()=>{W=c.width=c.offsetWidth;H=c.height=c.offsetHeight};
+  resize();window.addEventListener('resize',resize);
+  document.addEventListener('mousemove',e=>{mx2=e.clientX;my2=e.clientY});
+  // particles
+  for(let i=0;i<70;i++)pts.push({
+    x:Math.random()*100,y:Math.random()*100,
+    vx:(Math.random()-.5)*.01,vy:(Math.random()-.5)*.01,
+    r:Math.random()*1.6+.3,
+    a:Math.random()*.3+.06,
+    col:Math.random()<.2?'0,255,135':Math.random()<.25?'255,101,53':'238,234,224',
+    pulse:Math.random()*Math.PI*2,ps:Math.random()*.02+.01
+  });
+  // grid dots
+  const gridDots=[];
+  for(let gx=0;gx<=12;gx++)for(let gy=0;gy<=8;gy++)gridDots.push({px:gx/12,py:gy/8});
 
-const draw=()=>{
-ctx.clearRect(0,0,W,H);
-// grid dots
-gridDots.forEach(d=>{
-const sx=d.px*W,sy=d.py*H;
-const dist=Math.hypot(sx-mx2,sy-my2);
-const glow=Math.max(0,1-dist/300);
-ctx.beginPath();ctx.arc(sx,sy,1+glow*2,0,Math.PI*2);
-ctx.fillStyle=`rgba(0,255,135,${.04+glow*.2})`;ctx.fill();
-});
-// moving particles
-pts.forEach(p=>{
-p.x=(p.x+p.vx+100)%100;p.y=(p.y+p.vy+100)%100;
-p.pulse+=p.ps;
-const a=p.a*(0.65+Math.sin(p.pulse)*.35);
-ctx.beginPath();ctx.arc(p.x/100*W,p.y/100*H,p.r,0,Math.PI*2);
-ctx.fillStyle=`rgba(${p.col},${a})`;ctx.fill();
-});
-// mouse radial
-const gr=ctx.createRadialGradient(mx2,my2,0,mx2,my2,320);
-gr.addColorStop(0,'rgba(0,255,135,.05)');gr.addColorStop(1,'transparent');
-ctx.fillStyle=gr;ctx.fillRect(0,0,W,H);
-requestAnimationFrame(draw);
-};draw();
+  const draw=()=>{
+    ctx.clearRect(0,0,W,H);
+    // grid dots
+    gridDots.forEach(d=>{
+      const sx=d.px*W,sy=d.py*H;
+      const dist=Math.hypot(sx-mx2,sy-my2);
+      const glow=Math.max(0,1-dist/300);
+      ctx.beginPath();ctx.arc(sx,sy,1+glow*2,0,Math.PI*2);
+      ctx.fillStyle=`rgba(0,255,135,${.04+glow*.2})`;ctx.fill();
+    });
+    // moving particles
+    pts.forEach(p=>{
+      p.x=(p.x+p.vx+100)%100;p.y=(p.y+p.vy+100)%100;
+      p.pulse+=p.ps;
+      const a=p.a*(0.65+Math.sin(p.pulse)*.35);
+      ctx.beginPath();ctx.arc(p.x/100*W,p.y/100*H,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(${p.col},${a})`;ctx.fill();
+    });
+    // mouse radial
+    const gr=ctx.createRadialGradient(mx2,my2,0,mx2,my2,320);
+    gr.addColorStop(0,'rgba(0,255,135,.05)');gr.addColorStop(1,'transparent');
+    ctx.fillStyle=gr;ctx.fillRect(0,0,W,H);
+    requestAnimationFrame(draw);
+  };draw();
 })();
 
 /* ─── HOME COUNTERS ─── */
 function animCount(id,target,suffix,dur=1200){
-const el=document.getElementById(id);if(!el)return;
-const start=performance.now();
-const tick=now=>{
-const p=Math.min((now-start)/dur,1);
-const eased=1-Math.pow(1-p,3);
-el.innerHTML=Math.floor(eased*target)+'<em>'+suffix+'</em>';
-if(p<1)requestAnimationFrame(tick);
-};requestAnimationFrame(tick);
+  const el=document.getElementById(id);if(!el)return;
+  const start=performance.now();
+  const tick=now=>{
+    const p=Math.min((now-start)/dur,1);
+    const eased=1-Math.pow(1-p,3);
+    el.innerHTML=Math.floor(eased*target)+'<em>'+suffix+'</em>';
+    if(p<1)requestAnimationFrame(tick);
+  };requestAnimationFrame(tick);
 }
 function startHomeCounters(){
-animCount('cnt1',5,'+');
-animCount('cnt2',20,'+',1400);
-animCount('cnt4',5,'★',1600);
+  animCount('cnt1',5,'+');
+  animCount('cnt2',20,'+',1400);
+  animCount('cnt4',5,'★',1600);
 }
 setTimeout(startHomeCounters,600);
 
 /* ─── WORK FILTER ─── */
 function doFilter(btn,cat){
-document.querySelectorAll('.wk-fbtn').forEach(b=>b.classList.remove('on'));
-btn.classList.add('on');
-document.querySelectorAll('.wk-item').forEach(item=>{
-const show=cat==='all'||item.dataset.cat===cat;
-item.style.transition='opacity .4s,transform .4s';
-item.style.opacity=show?'1':'0.08';
-item.style.transform=show?'scale(1)':'scale(.97)';
-item.style.pointerEvents=show?'auto':'none';
-});
+  document.querySelectorAll('.wk-fbtn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
+  document.querySelectorAll('.wk-item').forEach(item=>{
+    const show=cat==='all'||item.dataset.cat===cat;
+    item.style.transition='opacity .4s,transform .4s';
+    item.style.opacity=show?'1':'0.08';
+    item.style.transform=show?'scale(1)':'scale(.97)';
+    item.style.pointerEvents=show?'auto':'none';
+  });
 }
 
 /* ─── FAQ ─── */
 function toggleFaq(el){
-const was=el.classList.contains('open');
-document.querySelectorAll('.faq-it.open').forEach(f=>f.classList.remove('open'));
-if(!was)el.classList.add('open');
+  const was=el.classList.contains('open');
+  document.querySelectorAll('.faq-it.open').forEach(f=>f.classList.remove('open'));
+  if(!was)el.classList.add('open');
 }
 
 /* ─── FORM ─── */
 function toggleChip(el){
-el.classList.toggle('on');
-const selected=[...document.querySelectorAll('.chip.on')]
-.map(c=>c.textContent).join(', ');
-const f=document.getElementById('servicesField');
-if(f)f.value=selected;
+  el.classList.toggle('on');
+  const selected=[...document.querySelectorAll('.chip.on')]
+    .map(c=>c.textContent).join(', ');
+  const f=document.getElementById('servicesField');
+  if(f)f.value=selected;
 }
 
 /* ─── MOBILE MENU ─── */
@@ -1796,40 +1734,40 @@ function closeMob(){document.getElementById('mobMenu').classList.remove('open')}
 /* ─── INIT ─── */
 window.addEventListener('load',()=>setTimeout(kickReveal,100));
 document.querySelectorAll('.sv-acc-card').forEach(card=>{
-card.addEventListener('mousemove',e=>{
-const r=card.getBoundingClientRect();
-const x=e.clientX-r.left,y=e.clientY-r.top;
-const cx=r.width/2,cy=r.height/2;
-const rX=((y-cy)/cy)*-8,rY=((x-cx)/cx)*8;
-card.style.transform=`perspective(800px) rotateX(${rX}deg) rotateY(${rY}deg) translateY(-10px) scale(1.02)`;
-});
-card.addEventListener('mouseleave',()=>{
-card.style.transform='perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)';
-});
+  card.addEventListener('mousemove',e=>{
+    const r=card.getBoundingClientRect();
+    const x=e.clientX-r.left,y=e.clientY-r.top;
+    const cx=r.width/2,cy=r.height/2;
+    const rX=((y-cy)/cy)*-8,rY=((x-cx)/cx)*8;
+    card.style.transform=`perspective(800px) rotateX(${rX}deg) rotateY(${rY}deg) translateY(-10px) scale(1.02)`;
+  });
+  card.addEventListener('mouseleave',()=>{
+    card.style.transform='perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)';
+  });
 });
 </script>
 <script type="application/ld+json">
 {
-"@context": "https://schema.org",
-"@type": "ProfessionalService",
-"name": "Gen-D Creative",
-"description": "Digital Design and Brand Development Studio based in Chennai, India",
-"url": "https://gendcreative.com",
-"address": {
-"@type": "PostalAddress",
-"addressLocality": "Chennai",
-"addressRegion": "Tamil Nadu",
-"addressCountry": "IN"
-},
-"hasOfferCatalog": {
-"@type": "OfferCatalog",
-"name": "Design Services",
-"itemListElement": [
-{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brand Identity Design"}},
-{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Web Design & Development"}},
-{"@type": "Offer", "itemOffered": {"@type": "Service", "name": "UI/UX Design"}}
-]
-}
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Gen-D Creative",
+  "description": "Digital Design and Brand Development Studio based in Chennai, India",
+  "url": "https://gendcreative.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chennai",
+    "addressRegion": "Tamil Nadu",
+    "addressCountry": "IN"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Design Services",
+    "itemListElement": [
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Brand Identity Design"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Web Design & Development"}},
+      {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "UI/UX Design"}}
+    ]
+  }
 }
 </script>
 </body>
