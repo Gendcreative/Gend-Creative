@@ -127,7 +127,7 @@ nav.stuck{padding:14px 64px;background:rgba(6,6,10,.93);backdrop-filter:blur(28p
 body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;opacity:.028;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 
 /* ════════════════════════════════
-  HOME — HERO
+ HOME — HERO
 ════════════════════════════════ */
 .h-hero{min-height:100vh;display:flex;flex-direction:column;justify-content:flex-end;padding:0 64px 88px;position:relative;overflow:hidden;background:var(--bg)}
 #heroCanvas{position:absolute;inset:0;width:100%;height:100%}
@@ -371,7 +371,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .foot-loc-dot{width:6px;height:6px;border-radius:50%;background:var(--acc);animation:pulse2 2s ease-in-out infinite}
 
 /* ════════════════════════════════
-  SERVICES PAGE
+ SERVICES PAGE
 ════════════════════════════════ */
 .sv-hero{padding:175px 64px 90px;position:relative;overflow:hidden}
 .sv-hero::before{content:'';position:absolute;right:-10%;top:0;bottom:0;width:55%;background:radial-gradient(ellipse 75% 80% at 90% 50%,rgba(0,255,135,.05),transparent);pointer-events:none}
@@ -405,7 +405,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .sv-cta-band h2 em{font-style:normal;color:var(--acc)}
 
 /* ════════════════════════════════
-  ABOUT PAGE
+ ABOUT PAGE
 ════════════════════════════════ */
 .ab-hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;align-items:center;padding:160px 64px 80px;gap:80px;position:relative;overflow:hidden}
 .ab-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 40% 60% at 5% 65%,rgba(0,255,135,.05),transparent);pointer-events:none}
@@ -461,7 +461,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .ab-story-text em{color:var(--acc);font-style:normal;font-family:var(--ff-mono);font-size:11.5px}
 
 /* ════════════════════════════════
-  WORK PAGE
+ WORK PAGE
 ════════════════════════════════ */
 .wk-hero{padding:175px 64px 68px;position:relative;overflow:hidden}
 .wk-hero::before{content:'';position:absolute;top:0;right:-10%;width:55%;height:100%;background:radial-gradient(ellipse 60% 80% at 80% 40%,rgba(0,255,135,.05),transparent);pointer-events:none}
@@ -497,7 +497,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .p6{background:linear-gradient(135deg,#001016,#00242e);aspect-ratio:4/3}
 
 /* ════════════════════════════════
-  CONTACT PAGE
+ CONTACT PAGE
 ════════════════════════════════ */
 .ct-hero{padding:175px 64px 80px;display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;border-bottom:1px solid var(--brd);position:relative;overflow:hidden}
 .ct-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 45% 65% at 8% 45%,rgba(0,255,135,.04),transparent);pointer-events:none}
@@ -556,7 +556,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .faq-2col{display:grid;grid-template-columns:1fr 1fr;gap:0 48px}
 
 /* ════════════════════════════════
-  RESPONSIVE
+ RESPONSIVE
 ════════════════════════════════ */
 @media(max-width:1024px){
 .nav-links,.nav-cta-btn{display:none}
@@ -688,7 +688,7 @@ nav.stuck{padding:14px 28px}
 
 
 <!-- ═══════════════════════════════════
-    HOME PAGE
+   HOME PAGE
 ═══════════════════════════════════ -->
 <div class="pg on" id="pg-home">
 
@@ -847,6 +847,8 @@ Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
 <div class="why-list">
 <div class="why-item reveal d1">
 <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div></span></div>
+          <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div></div>
           <div class="why-body">
             <h4>We don't decorate. We solve.</h4>
             <p>Every design decision has a business reason. Beauty and function aren't a trade-off — if something looks great but doesn't work, we'll say so before you ship it.</p>
@@ -882,6 +884,9 @@ Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
 </div>
 </div>
 <div class="why-item reveal d2">
+<div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></span></div>
+          <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div>
           <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
 <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></span></div>
 <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div></div>
@@ -891,6 +896,9 @@ Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
 </div>
 </div>
 <div class="why-item reveal d3">
+<div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div></span></div>
+          <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div></div>
           <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
 <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div></span></div>
 <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div></div>
@@ -900,6 +908,9 @@ Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
 </div>
 </div>
 <div class="why-item reveal d4">
+<div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></span></div>
+          <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div>
           <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
 <div class="why-ico"><span><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></span></div>
 <div class="why-ico"><div class="sv-ico-box" style="width:44px;height:44px;border-radius:10px;margin-bottom:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div></div>
@@ -1271,7 +1282,7 @@ Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
 
 
 <!-- ═══════════════════════════════════
-    SERVICES PAGE
+   SERVICES PAGE
 ═══════════════════════════════════ -->
 <div class="pg" id="pg-services">
 <div class="sv-hero">
@@ -1305,7 +1316,7 @@ Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
 
 
 <!-- ═══════════════════════════════════
-    ABOUT PAGE
+   ABOUT PAGE
 ═══════════════════════════════════ -->
 <div class="pg" id="pg-about">
 <div class="ab-hero">
@@ -1359,6 +1370,7 @@ Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
 <div class="sec-tag reveal">// Our Values</div>
 <h2 class="ab-val-h reveal d1">What we actually<br>stand <em>for</em></h2>
 <div class="ab-val-grid">
+<div class="ab-val reveal"><div class="ab-val-ico"><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div class="ab-val-name">We don't decorate. We solve.</div><p class="ab-val-desc">Every design decision has a reason. Beauty and function aren't a trade-off. If something looks great but doesn't work, we'll say so.</p></div>
       <div class="ab-val reveal"><div class="ab-val-ico"><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div><div class="ab-val-name">We don't decorate. We solve.</div><p class="ab-val-desc">Every design decision has a reason. Beauty and function aren't a trade-off. If something looks great but doesn't work, we'll say so.</p></div>
 <div class="ab-val reveal"><div class="ab-val-ico"><div class="sv-ico-box" style="width:48px;height:48px;border-radius:12px;margin-bottom:16px"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div></div><div class="ab-val-name">We don't decorate. We solve.</div><p class="ab-val-desc">Every design decision has a reason. Beauty and function aren't a trade-off. If something looks great but doesn't work, we'll say so.</p></div>
 <div class="ab-val reveal d1"><div class="ab-val-ico">🤝</div><div class="ab-val-name">We'll push back — because we care.</div><p class="ab-val-desc">We're not order-takers. A real partner tells you the truth, not just what you want to hear. We do it to protect your project.</p></div>
@@ -1385,7 +1397,7 @@ Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
 
 
 <!-- ═══════════════════════════════════
-    WORK PAGE
+   WORK PAGE
 ═══════════════════════════════════ -->
 <div class="pg" id="pg-work">
 <div class="wk-hero">
@@ -1494,7 +1506,7 @@ Chennai-born &nbsp;·&nbsp; Globally curious &nbsp;·&nbsp; Est. 2022
 
 
 <!-- ═══════════════════════════════════
-    CONTACT PAGE
+   CONTACT PAGE
 ═══════════════════════════════════ -->
 <div class="pg" id="pg-contact">
 <div class="ct-hero">
