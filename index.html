@@ -220,16 +220,16 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .h-why-l h2{font-family:var(--ff-disp);font-size:clamp(38px,5vw,64px);font-weight:800;line-height:.95;letter-spacing:-.025em}
 .h-why-l h2 em{font-style:normal;color:var(--acc)}
 .h-why-l p{font-size:14px;line-height:1.9;color:var(--fg2);margin-top:24px}
-.why-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(255,255,255,0.06)}
-.why-item{display:grid;grid-template-columns:52px 1fr;gap:24px;align-items:start;padding:40px 36px;border-bottom:none;position:relative;cursor:none;transition:background .3s;background:var(--bg)}
-.why-item:first-child{border-top:1px solid var(--brd)}
+.why-list{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:rgba(238,234,224,.06)}
+.why-item{display:flex;flex-direction:row;gap:20px;align-items:flex-start;padding:36px 32px;position:relative;cursor:none;transition:background .3s;background:var(--bg1)}
 .why-item:hover{background:var(--bg2)}
 .why-ico{width:52px;height:52px;display:flex;align-items:center;justify-content:center;font-size:22px;background:rgba(0,255,128,0.12);border:1.5px solid rgba(0,255,128,0.25);border-radius:12px;flex-shrink:0;transition:transform 0.4s cubic-bezier(.16,1,.3,1),background 0.4s ease,border-color 0.4s ease,box-shadow 0.4s ease;color:#00ff87}
 .why-item:hover .why-ico{background:rgba(0,255,128,0.22);border-color:rgba(0,255,128,0.6);transform:scale(1.15) rotate(-6deg);box-shadow:0 0 20px rgba(0,255,128,0.3),0 0 40px rgba(0,255,128,0.15)}
 .why-item:hover .why-ico span{filter:invert(1) brightness(0)}
-.why-body h4{font-family:var(--ff-disp);font-size:18px;font-weight:700;margin-bottom:8px;transition:color .3s}
+.why-body{flex:1;min-width:0}
+.why-body h4{font-family:var(--ff-disp);font-size:17px;font-weight:700;margin-bottom:10px;line-height:1.2;transition:color .3s}
 .why-item:hover .why-body h4{color:var(--acc)}
-.why-body p{font-size:13.5px;line-height:1.8;color:var(--fg2)}
+.why-body p{font-size:13px;line-height:1.82;color:var(--fg2)}
 
 /* ────── HOME WORK PREVIEW ────── */
 .h-work{padding:100px 64px}
@@ -572,6 +572,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
   .h-about-r{padding:56px 28px}
   .sv-acc-grid,.proc-grid,.h-proc-steps{grid-template-columns:1fr}
   .h-why-grid{grid-template-columns:1fr}
+  .why-list{grid-template-columns:1fr}
   .h-wk-grid{grid-template-columns:1fr}
   .h-wk-col{gap:14px}
   .testi-grid{grid-template-columns:1fr}
@@ -596,7 +597,46 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
   .h-hero-foot{flex-direction:column;align-items:flex-start}
   .h-hero-scroll{display:none}
 }
-/* ── SERVICE CARD INTERACTIONS ── */
+/* ── THANK YOU SCREEN ── */
+.ct-success{display:none;padding:80px 0 40px;animation:tyFadeIn .6s var(--ease) forwards}
+@keyframes tyFadeIn{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+.ty-wrap{max-width:600px;margin:0 auto;text-align:center}
+.ty-ring{width:100px;height:100px;margin:0 auto 32px;position:relative}
+.ty-check{width:100%;height:100%;overflow:visible}
+.ty-circle{stroke-dasharray:232;stroke-dashoffset:232;animation:drawCircle .8s var(--ease) .1s forwards}
+.ty-tick{stroke-dasharray:60;stroke-dashoffset:60;animation:drawTick .5s var(--ease) .75s forwards}
+@keyframes drawCircle{to{stroke-dashoffset:0}}
+@keyframes drawTick{to{stroke-dashoffset:0}}
+.ty-tag{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--acc);margin-bottom:20px;display:flex;align-items:center;justify-content:center;gap:10px}
+.ty-tag::before{content:'//';color:var(--fg3)}
+.ty-h{font-family:var(--ff-disp);font-size:clamp(40px,6vw,72px);font-weight:800;line-height:.9;letter-spacing:-.03em;margin-bottom:20px}
+.ty-h em{font-style:normal;color:var(--acc)}
+.ty-p{font-size:15px;line-height:1.88;color:var(--fg2);margin-bottom:40px;max-width:440px;margin-left:auto;margin-right:auto}
+.ty-p strong{color:var(--fg);font-weight:500}
+.ty-cards{display:flex;gap:16px;justify-content:center;margin-bottom:40px;flex-wrap:wrap}
+.ty-card{background:var(--bg2);border:1px solid var(--brd);border-radius:14px;padding:20px 28px;text-align:left;min-width:200px;transition:border-color .3s,transform .3s}
+.ty-card:hover{border-color:var(--brd-acc);transform:translateY(-3px)}
+.ty-card-ico{font-size:22px;margin-bottom:8px}
+.ty-card-label{font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--fg3);margin-bottom:4px}
+.ty-card-val{font-family:var(--ff-disp);font-size:15px;font-weight:700;color:var(--acc);text-decoration:none;display:block;transition:opacity .2s}
+.ty-card-val:hover{opacity:.75}
+.ty-back-btn{background:transparent;border:1px solid var(--brd2);color:var(--fg2);font-family:var(--ff-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:12px 24px;border-radius:8px;cursor:none;transition:all .3s}
+.ty-back-btn:hover{border-color:var(--acc);color:var(--acc)}
+/* ── SUBMIT LOADING STATE ── */
+.sub-btn.loading{opacity:.7;pointer-events:none}
+.sub-btn.loading #submitTxt::after{content:'...';animation:dots 1.2s steps(3,end) infinite}
+@keyframes dots{0%,20%{content:'.'}40%,60%{content:'..'}80%,100%{content:'...'}}
+
+.h-wk-card .h-wk-bg{background-repeat:no-repeat}
+.h-wk-card.tall{aspect-ratio:4/5;min-height:380px}
+.h-wk-card.mid{aspect-ratio:16/9;min-height:180px}
+.h-wk-card.sm{aspect-ratio:16/8;min-height:140px}
+.wk-item{background:#06060a}
+.wk-item[data-cat="ui"].span2{aspect-ratio:16/7;min-height:320px}
+.wk-item[data-cat="app"]{aspect-ratio:4/3}
+.wk-item[data-cat="web"]{aspect-ratio:4/3}
+.wk-item[data-cat="brand"]{aspect-ratio:4/3}
+
 .sv-acc-card{transition:transform 0.3s cubic-bezier(.16,1,.3,1),box-shadow 0.3s ease,background 0.3s ease;transform-style:preserve-3d;cursor:pointer;position:relative;overflow:hidden}
 .sv-acc-card:hover{transform:translateY(-10px) scale(1.02);box-shadow:0 24px 60px rgba(0,255,128,0.12),0 8px 24px rgba(0,0,0,0.4);background:#0d1f14 !important;z-index:10}
 .sv-acc-card .sv-ico-box{transition:transform 0.4s cubic-bezier(.16,1,.3,1),box-shadow 0.4s ease,background 0.4s ease}
@@ -620,9 +660,8 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .sv-acc-card:hover .sv-ico-box span{color:#ffffff;transform:scale(1.1)}
 
 /* WHY ITEM ICON HOVER */
-.why-item .sv-ico-box{transition:transform 0.4s cubic-bezier(.16,1,.3,1),background 0.4s ease,border-color 0.4s ease,box-shadow 0.4s ease,color 0.3s ease}
-.why-item:hover .sv-ico-box{background:#00ff87!important;border-color:#00ff87!important;transform:scale(1.15) rotate(-6deg);box-shadow:0 0 28px rgba(0,255,135,.55),0 0 56px rgba(0,255,135,.25);color:#000!important}
-.why-item:hover .sv-ico-box svg{stroke:#000}
+.why-item:hover .why-ico{background:#00ff87!important;border-color:#00ff87!important;transform:scale(1.12) rotate(-6deg);box-shadow:0 0 28px rgba(0,255,135,.55),0 0 56px rgba(0,255,135,.25);color:#000!important}
+.why-item:hover .why-ico svg{stroke:#000}
 .why-item:hover .why-body h4{color:var(--acc)}
 </style>
 </head>
@@ -829,28 +868,28 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
       </div>
       <div class="why-list">
         <div class="why-item reveal d1">
-          <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+          <div class="why-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
           <div class="why-body">
             <h4>We don't decorate. We solve.</h4>
             <p>Every design decision has a business reason. Beauty and function aren't a trade-off — if something looks great but doesn't work, we'll say so before you ship it.</p>
           </div>
         </div>
         <div class="why-item reveal d2">
-          <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+          <div class="why-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
           <div class="why-body">
             <h4>We'll push back — because we care.</h4>
             <p>We're not order-takers. If we think you're heading in the wrong direction, we'll tell you. That's what a real partner does. You hired us for our judgment, not just our hands.</p>
           </div>
         </div>
         <div class="why-item reveal d3">
-          <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+          <div class="why-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
           <div class="why-body">
             <h4>Fast without cutting corners.</h4>
             <p>We've built systems that let us deliver high quality on tight timelines. Most studios choose one — we do both. StyleVault's redesign took 9 days. Check the results.</p>
           </div>
         </div>
         <div class="why-item reveal d4">
-          <div class="sv-ico-box" style="width:52px;height:52px;border-radius:14px;margin-bottom:0;flex-shrink:0"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+          <div class="why-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
           <div class="why-body">
             <h4>No hidden costs. No vague timelines.</h4>
             <p>Clear scope, clear pricing, clear communication. You'll always know what's happening and when. No surprises on the invoice and no radio silence in the middle of a project.</p>
@@ -869,59 +908,45 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
     <div class="h-wk-grid">
       <div class="h-wk-col">
         <div class="h-wk-card tall reveal" onclick="go('work')">
-          <div class="h-wk-bg" style="background:linear-gradient(135deg,#0a1628,#1a2d4e,#112233)">
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.2;padding:40px">
-              <div style="width:100%;display:grid;grid-template-columns:repeat(5,1fr);gap:8px">
-                <div style="background:rgba(0,255,135,.4);height:28px;border-radius:4px;grid-column:span 5"></div>
-                <div style="background:rgba(0,255,135,.15);height:80px;border-radius:4px;grid-column:span 2"></div>
-                <div style="background:rgba(0,255,135,.08);height:80px;border-radius:4px;grid-column:span 3"></div>
-                <div style="background:rgba(0,255,135,.1);height:50px;border-radius:4px;grid-column:span 3"></div>
-                <div style="background:rgba(0,255,135,.06);height:50px;border-radius:4px;grid-column:span 2"></div>
-              </div>
-            </div>
-          </div>
+          <div class="h-wk-bg" style="background:#0a1628;background-image:url('https://github.com/Gendcreative/Gend-Creative/blob/main/Dashboard%20(2).png?raw=true');background-size:cover;background-position:center top"></div>
           <div class="h-wk-ov"></div>
           <div class="h-wk-pill">DASHBOARD</div>
           <div class="h-wk-arrow">↗</div>
           <div class="h-wk-info">
             <div class="h-wk-cat">UI/UX Design</div>
-            <div class="h-wk-name">Analytics Dashboard</div>
-            <div class="h-wk-outcome">→ 40% faster decisions</div>
+            <div class="h-wk-name">Hospital Admin Dashboard</div>
           </div>
         </div>
       </div>
       <div class="h-wk-col">
         <div class="h-wk-card mid reveal d1" onclick="go('work')">
-          <div class="h-wk-bg" style="background:linear-gradient(135deg,#0f0a1e,#1e0f3d,#2d1a5a)"></div>
+          <div class="h-wk-bg" style="background:#0a0a18;background-image:url('https://github.com/Gendcreative/Gend-Creative/blob/main/App.png?raw=true');background-size:cover;background-position:center center"></div>
           <div class="h-wk-ov"></div>
           <div class="h-wk-pill">APP</div>
           <div class="h-wk-arrow">↗</div>
           <div class="h-wk-info">
             <div class="h-wk-cat">Mobile · iOS & Android</div>
-            <div class="h-wk-name">FitTrack App</div>
-            <div class="h-wk-outcome">→ 4.8★ App Store week one</div>
+            <div class="h-wk-name">Wattway — EV Charging App</div>
           </div>
         </div>
         <div class="h-wk-card sm reveal d2" onclick="go('work')">
-          <div class="h-wk-bg" style="background:linear-gradient(135deg,#150805,#2d1008,#4a1c0a)"></div>
+          <div class="h-wk-bg" style="background:#080c08;background-image:url('https://github.com/Gendcreative/Gend-Creative/blob/main/shopify.png?raw=true');background-size:cover;background-position:center center"></div>
           <div class="h-wk-ov"></div>
-          <div class="h-wk-pill">SHOPIFY</div>
+          <div class="h-wk-pill">WORDPRESS</div>
           <div class="h-wk-arrow">↗</div>
           <div class="h-wk-info">
             <div class="h-wk-cat">Web Development</div>
-            <div class="h-wk-name">StyleVault Store</div>
-            <div class="h-wk-outcome">→ 3× revenue after launch</div>
+            <div class="h-wk-name">Grandmaster Hospitality</div>
           </div>
         </div>
         <div class="h-wk-card sm reveal d3" onclick="go('work')">
-          <div class="h-wk-bg" style="background:linear-gradient(135deg,#060f06,#0d2010,#1a3d1a)"></div>
+          <div class="h-wk-bg" style="background:#0a0808;background-image:url('https://github.com/Gendcreative/Gend-Creative/blob/main/brand.png?raw=true');background-size:cover;background-position:center center"></div>
           <div class="h-wk-ov"></div>
           <div class="h-wk-pill">BRAND</div>
           <div class="h-wk-arrow">↗</div>
           <div class="h-wk-info">
             <div class="h-wk-cat">Brand Identity</div>
-            <div class="h-wk-name">NovaBrands Identity</div>
-            <div class="h-wk-outcome">→ Delivered in 12 days</div>
+            <div class="h-wk-name">Trendy Threads Identity</div>
           </div>
         </div>
       </div>
@@ -1349,87 +1374,51 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
     <button class="wk-fbtn" onclick="doFilter(this,'video')">Video</button>
   </div>
   <div class="wk-grid" id="wkGrid">
-    <div class="wk-item span2 p1 reveal" data-cat="ui">
-      <div class="wk-item-bg p1" style="position:absolute;inset:0"></div>
-      <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:.2;padding:48px">
-        <div style="width:100%;display:grid;grid-template-columns:repeat(5,1fr);gap:10px">
-          <div style="background:rgba(0,255,135,.5);height:30px;border-radius:4px;grid-column:span 5"></div>
-          <div style="background:rgba(0,255,135,.2);height:90px;border-radius:4px;grid-column:span 2"></div>
-          <div style="background:rgba(0,255,135,.1);height:90px;border-radius:4px;grid-column:span 3"></div>
-          <div style="background:rgba(0,255,135,.15);height:54px;border-radius:4px;grid-column:span 3"></div>
-          <div style="background:rgba(0,255,135,.08);height:54px;border-radius:4px;grid-column:span 2"></div>
-        </div>
-      </div>
+    <div class="wk-item span2 reveal" data-cat="ui" style="aspect-ratio:16/7">
+      <div class="wk-item-bg" style="position:absolute;inset:0;background-color:#0a1628;background-image:url('https://github.com/Gendcreative/Gend-Creative/blob/main/Dashboard%20(2).png?raw=true');background-size:cover;background-position:center top;transition:transform .7s cubic-bezier(.16,1,.3,1)"></div>
       <div class="wk-item-ov"></div>
       <div class="wk-pill">DASHBOARD</div>
       <div class="wk-item-arrow">↗</div>
       <div class="wk-item-info">
         <div class="wk-item-cat">UI/UX Design</div>
-        <div class="wk-item-name">E-Commerce Analytics Dashboard</div>
-        <div class="wk-item-outcome">→ Client reduced decision time by 40%</div>
+        <div class="wk-item-name">Hospital Admin Dashboard</div>
         <div class="wk-item-tags"><span class="wk-itag">Figma</span><span class="wk-itag">Dashboard</span><span class="wk-itag">Dark UI</span></div>
       </div>
     </div>
     <div class="wk-item p2 reveal d1" data-cat="app">
-      <div class="wk-item-bg" style="position:absolute;inset:0;background-image:url(images/project2.jpg);background-size:cover;background-position:center;transition:transform .7s cubic-bezier(.16,1,.3,1)"></div>
+      <div class="wk-item-bg" style="position:absolute;inset:0;background-color:#0a0a18;background-image:url('https://github.com/Gendcreative/Gend-Creative/blob/main/App.png?raw=true');background-size:cover;background-position:center center;transition:transform .7s cubic-bezier(.16,1,.3,1)"></div>
       <div class="wk-item-ov"></div>
       <div class="wk-pill">APP</div>
       <div class="wk-item-arrow">↗</div>
       <div class="wk-item-info">
         <div class="wk-item-cat">Mobile App · iOS & Android</div>
-        <div class="wk-item-name">FitTrack — Fitness App</div>
-        <div class="wk-item-outcome">→ 4.8★ App Store rating, week one</div>
+        <div class="wk-item-name">Wattway — EV Charging App</div>
         <div class="wk-item-tags"><span class="wk-itag">React Native</span><span class="wk-itag">iOS</span></div>
       </div>
     </div>
     <div class="wk-item p3 reveal d2" data-cat="web">
-      <div class="wk-item-bg p3" style="position:absolute;inset:0"></div>
+      <div class="wk-item-bg" style="position:absolute;inset:0;background-color:#080c08;background-image:url('https://github.com/Gendcreative/Gend-Creative/blob/main/shopify.png?raw=true');background-size:cover;background-position:center center;transition:transform .7s cubic-bezier(.16,1,.3,1)"></div>
       <div class="wk-item-ov"></div>
-      <div class="wk-pill">SHOPIFY</div>
+      <div class="wk-pill">WORDPRESS</div>
       <div class="wk-item-arrow">↗</div>
       <div class="wk-item-info">
-        <div class="wk-item-cat">Web Development · Shopify</div>
-        <div class="wk-item-name">StyleVault — Fashion Store</div>
-        <div class="wk-item-outcome">→ 3× revenue month after launch</div>
-        <div class="wk-item-tags"><span class="wk-itag">Shopify</span><span class="wk-itag">E-Commerce</span></div>
+        <div class="wk-item-cat">Web Development · WordPress & Shopify</div>
+        <div class="wk-item-name">Grandmaster Hospitality</div>
+        <div class="wk-item-tags"><span class="wk-itag">WordPress</span><span class="wk-itag">Shopify</span><span class="wk-itag">E-Commerce</span></div>
       </div>
     </div>
     <div class="wk-item p4 reveal" data-cat="brand">
-      <div class="wk-item-bg p4" style="position:absolute;inset:0"></div>
+      <div class="wk-item-bg" style="position:absolute;inset:0;background-color:#0a0808;background-image:url('https://github.com/Gendcreative/Gend-Creative/blob/main/brand.png?raw=true');background-size:cover;background-position:center center;transition:transform .7s cubic-bezier(.16,1,.3,1)"></div>
       <div class="wk-item-ov"></div>
       <div class="wk-pill">BRAND</div>
       <div class="wk-item-arrow">↗</div>
       <div class="wk-item-info">
         <div class="wk-item-cat">Brand Identity</div>
-        <div class="wk-item-name">NovaBrands — Full Identity</div>
-        <div class="wk-item-outcome">→ Delivered in 12 days flat</div>
+        <div class="wk-item-name">Trendy Threads — Full Identity</div>
         <div class="wk-item-tags"><span class="wk-itag">Logo</span><span class="wk-itag">Brand Book</span></div>
       </div>
     </div>
-    <div class="wk-item p5 reveal d1" data-cat="video">
-      <div class="wk-item-bg p5" style="position:absolute;inset:0"></div>
-      <div class="wk-item-ov"></div>
-      <div class="wk-pill">VIDEO</div>
-      <div class="wk-item-arrow">↗</div>
-      <div class="wk-item-info">
-        <div class="wk-item-cat">Video Production</div>
-        <div class="wk-item-name">Product Launch Campaign</div>
-        <div class="wk-item-outcome">→ 2M+ organic reach</div>
-        <div class="wk-item-tags"><span class="wk-itag">Reels</span><span class="wk-itag">Motion</span></div>
-      </div>
-    </div>
-    <div class="wk-item p6 reveal d2" data-cat="ui">
-      <div class="wk-item-bg p6" style="position:absolute;inset:0"></div>
-      <div class="wk-item-ov"></div>
-      <div class="wk-pill">FINTECH</div>
-      <div class="wk-item-arrow">↗</div>
-      <div class="wk-item-info">
-        <div class="wk-item-cat">UI/UX Design · FinTech</div>
-        <div class="wk-item-name">FinanceFlow — Banking UI</div>
-        <div class="wk-item-outcome">→ 32% increase in user retention</div>
-        <div class="wk-item-tags"><span class="wk-itag">Figma</span><span class="wk-itag">FinTech</span></div>
-      </div>
-    </div>
+    
   </div>
   <div style="padding:80px 64px;text-align:center;background:var(--bg1);border-top:1px solid var(--brd)">
     <div class="sec-tag reveal" style="justify-content:center">// Ready to be next?</div>
@@ -1475,10 +1464,11 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
     <h2 class="ct-form-h reveal d1">Tell us about<br>your <em>project.</em></h2>
     <p class="ct-form-sub reveal d2">Fill in what you know. You don't need to have everything figured out — that's what the first call is for.</p>
 
-    <form class="ct-form reveal d2" id="ctForm" action="https://api.web3forms.com/submit" method="POST">
+    <form class="ct-form reveal d2" id="ctForm">
       <input type="hidden" name="access_key" value="0d2ed456-dde6-472e-88f5-c2d5a6e0ac72">
       <input type="hidden" name="subject" value="New Project Inquiry — Gen-D Creative">
       <input type="hidden" name="from_name" value="Gen-D Creative Website">
+      <input type="hidden" name="redirect" value="false">
       <input type="hidden" name="services" id="servicesField" value="">
 
       <div class="ct-row">
@@ -1548,13 +1538,39 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 
       <div class="ct-sub-row">
         <p class="ct-agree">By submitting, you agree to our Privacy Policy. We never share your details with anyone.</p>
-        <button class="sub-btn" type="submit">Send Message <div class="sub-ico">→</div></button>
+        <button class="sub-btn" type="submit" id="submitBtn">
+          <span id="submitTxt">Send Message</span>
+          <div class="sub-ico" id="submitIco">→</div>
+        </button>
       </div>
     </form>
 
+    <!-- THANK YOU SCREEN -->
     <div class="ct-success" id="ctSuccess">
-      <h3>Message Sent ✓</h3>
-      <p>Got it! We're already thinking about your project.<br>Expect a personal reply from Dinesh by tomorrow.<br><br>In the meantime, WhatsApp us at <strong style="color:var(--acc)">9790070152</strong></p>
+      <div class="ty-wrap">
+        <div class="ty-ring">
+          <svg class="ty-check" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle class="ty-circle" cx="40" cy="40" r="37" stroke="#00ff87" stroke-width="2"/>
+            <polyline class="ty-tick" points="24,41 35,52 57,29" stroke="#00ff87" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="ty-tag">// Message Received</div>
+        <h3 class="ty-h">We've got<br>your <em>message.</em></h3>
+        <p class="ty-p">Thanks for reaching out! Dinesh will personally read your inquiry and get back to you within <strong>24 hours</strong> — usually much faster.</p>
+        <div class="ty-cards">
+          <div class="ty-card">
+            <div class="ty-card-ico">📱</div>
+            <div class="ty-card-label">WhatsApp us</div>
+            <a href="tel:9790070152" class="ty-card-val">9790070152</a>
+          </div>
+          <div class="ty-card">
+            <div class="ty-card-ico">✉</div>
+            <div class="ty-card-label">Or email us</div>
+            <a href="mailto:gendcreative@gmail.com" class="ty-card-val">gendcreative@gmail.com</a>
+          </div>
+        </div>
+        <button class="ty-back-btn" onclick="resetForm()">← Send Another Message</button>
+      </div>
     </div>
   </div>
 
@@ -1715,7 +1731,54 @@ function toggleFaq(el){
   if(!was)el.classList.add('open');
 }
 
-/* ─── FORM ─── */
+/* ─── FORM (fetch — no redirect) ─── */
+document.getElementById('ctForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  btn.classList.add('loading');
+  document.getElementById('submitTxt').textContent = 'Sending';
+  document.getElementById('submitIco').textContent = '⟳';
+
+  const data = new FormData(this);
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      body: data
+    });
+    const json = await res.json();
+    if (json.success) {
+      document.getElementById('ctForm').style.display = 'none';
+      const success = document.getElementById('ctSuccess');
+      success.style.display = 'block';
+      window.scrollTo({ top: success.offsetTop - 120, behavior: 'smooth' });
+    } else {
+      btn.classList.remove('loading');
+      document.getElementById('submitTxt').textContent = 'Send Message';
+      document.getElementById('submitIco').textContent = '→';
+      alert('Something went wrong. Please try again or email us directly.');
+    }
+  } catch(err) {
+    btn.classList.remove('loading');
+    document.getElementById('submitTxt').textContent = 'Send Message';
+    document.getElementById('submitIco').textContent = '→';
+    alert('Network error. Please email us at gendcreative@gmail.com');
+  }
+});
+
+function resetForm() {
+  document.getElementById('ctSuccess').style.display = 'none';
+  const form = document.getElementById('ctForm');
+  form.reset();
+  form.style.display = '';
+  document.querySelectorAll('.chip.on').forEach(c => c.classList.remove('on'));
+  document.getElementById('servicesField').value = '';
+  const btn = document.getElementById('submitBtn');
+  btn.classList.remove('loading');
+  document.getElementById('submitTxt').textContent = 'Send Message';
+  document.getElementById('submitIco').textContent = '→';
+  window.scrollTo({ top: form.offsetTop - 120, behavior: 'smooth' });
+}
+
 function toggleChip(el){
   el.classList.toggle('on');
   const selected=[...document.querySelectorAll('.chip.on')]
