@@ -21,6 +21,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Gen-D Creative | Digital Design & Brand Studio">
 <meta name="twitter:description" content="Bold brands, stunning websites, creative experiences.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20240%20240%22%3E%3Cpath%20d%3D%22M194.33%20108.66C201.784%20116.398%20201.575%20128.707%20193.863%20136.187L134.243%20194.014C127.42%20200.632%20115.994%20195.796%20115.994%20186.29C115.994%20183.427%20117.135%20180.683%20119.164%20178.664L161.048%20136.989C169.017%20129.06%20169.113%20116.191%20161.264%20108.144L120.242%2066.085C118.073%2063.8607%20116.859%2060.8765%20116.859%2057.7695C116.859%2047.0516%20129.91%2041.7879%20137.346%2049.5068L194.33%20108.66Z%22%20fill%3D%22%2300e87a%22%20stroke%3D%22%23059A50%22/%3E%3Cpath%20d%3D%22M92.4638%2048.8048C100.492%2040.6254%20114.399%2046.3098%20114.399%2057.7706C114.399%2061.1239%20113.083%2064.3443%20110.734%2066.7374L73.5517%20104.618C64.1523%20114.194%2064.6655%20129.684%2074.6787%20138.616L114.162%20173.836C116.657%20176.062%20121.103%20177.149%20123.395%20174.714L137.467%20159.767C139.064%20158.071%20139.73%20155.3%20138.222%20153.524L130.321%20144.215C127.921%20141.387%20124.4%20139.757%20120.691%20139.757H97.9755C91.7332%20139.757%2086.6723%20134.696%2086.6718%20128.453C86.672%20122.211%2091.733%20117.15%2097.9755%20117.15H129.983C130.942%20117.15%20131.903%20117.196%20132.856%20117.295C135.514%20117.572%20138.077%20118.852%20139.973%20121.101L165.193%20151.021C169.04%20155.584%20168.716%20162.504%20164.461%20166.692C161.242%20169.859%20157.329%20173.465%20154.222%20176.743C154.083%20176.889%20153.939%20177.033%20153.792%20177.174L132.302%20197.68L132.292%20197.69L123.766%20205.004C119.963%20208.266%20115.224%20208.123%20111.717%20205.891C106.771%20202.743%20100.906%20197.101%2096.6113%20193.11L38.8193%20139.389C28.7182%20129.999%2028.3545%20114.125%2038.0146%20104.282L92.4638%2048.8048Z%22%20fill%3D%22%2300ff87%22/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
@@ -74,10 +75,10 @@ body.drag #cur-r{opacity:0}
 /* ─── NAV ─── */
 nav{position:fixed;inset:0 0 auto;z-index:800;display:flex;justify-content:space-between;align-items:center;padding:28px 64px;transition:all .5s var(--ease)}
 nav.stuck{padding:14px 64px;background:rgba(6,6,10,.93);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border-bottom:1px solid var(--brd)}
-.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--fg)}
-.logo-mark{width:34px;height:34px;flex-shrink:0}
+.nav-logo{display:flex;align-items:center;gap:8px;text-decoration:none;color:var(--fg)}
+.logo-mark{width:42px;height:42px;flex-shrink:0}
 .logo-mark svg{width:100%;height:100%}
-.nav-logo-txt{font-family:var(--ff-disp);font-weight:800;font-size:16px;letter-spacing:-.01em}
+.nav-logo-txt{font-family:var(--ff-disp);font-weight:800;font-size:17.5px;letter-spacing:-.01em}
 .nav-logo-txt em{font-style:normal;color:var(--acc)}
 .nav-links{display:flex;gap:2px;list-style:none}
 .nav-links a{color:var(--fg3);text-decoration:none;font-family:var(--ff-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;padding:8px 16px;border-radius:6px;transition:all .25s;position:relative}
@@ -139,7 +140,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 .h-hero-status{display:flex;align-items:center;gap:14px;font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.2em;color:var(--acc);margin-bottom:36px}
 .h-pulse{width:7px;height:7px;border-radius:50%;background:var(--acc);animation:pulse2 2s ease-in-out infinite}
 @keyframes pulse2{0%,100%{box-shadow:0 0 0 0 var(--acc-glow)}50%{box-shadow:0 0 0 8px transparent}}
-.h-hero-h{font-family:var(--ff-disp);font-size:clamp(88px,13.5vw,210px);line-height:.83;letter-spacing:-.025em;margin-bottom:0}
+.h-hero-h{font-family:var(--ff-disp);font-size:clamp(64px,9.5vw,156px);line-height:.86;letter-spacing:-.025em;margin-bottom:0}
 .h-hero-h .ln{display:block;overflow:hidden}
 .h-hero-h .ln span{display:block;transform:translateY(110%);animation:up .95s var(--ease) forwards}
 .h-hero-h .ln:nth-child(1) span{animation-delay:.04s}
@@ -688,10 +689,17 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
 <nav id="nav">
   <a href="#" class="nav-logo" onclick="return go('home')">
     <div class="logo-mark">
-      <svg viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect x="7" y="7" width="20" height="20" rx="2" stroke="#00ff87" stroke-width="1.4" transform="rotate(45 17 17)"/>
-        <rect x="12" y="12" width="10" height="10" rx="1" fill="#00ff87" transform="rotate(45 17 17)"/>
-        <circle cx="17" cy="17" r="2.5" fill="#06060a"/>
+      <svg viewBox="0 0 240 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M194.33 108.66C201.784 116.398 201.575 128.707 193.863 136.187L134.243 194.014C127.42 200.632 115.994 195.796 115.994 186.29C115.994 183.427 117.135 180.683 119.164 178.664L161.048 136.989C169.017 129.06 169.113 116.191 161.264 108.144L120.242 66.085C118.073 63.8607 116.859 60.8765 116.859 57.7695C116.859 47.0516 129.91 41.7879 137.346 49.5068L194.33 108.66Z" fill="url(#gendGrad1)" stroke="#059A50"/>
+        <path d="M92.4638 48.8048C100.492 40.6254 114.399 46.3098 114.399 57.7706C114.399 61.1239 113.083 64.3443 110.734 66.7374L73.5517 104.618C64.1523 114.194 64.6655 129.684 74.6787 138.616L114.162 173.836C116.657 176.062 121.103 177.149 123.395 174.714L137.467 159.767C139.064 158.071 139.73 155.3 138.222 153.524L130.321 144.215C127.921 141.387 124.4 139.757 120.691 139.757H97.9755C91.7332 139.757 86.6723 134.696 86.6718 128.453C86.672 122.211 91.733 117.15 97.9755 117.15H129.983C130.942 117.15 131.903 117.196 132.856 117.295C135.514 117.572 138.077 118.852 139.973 121.101L165.193 151.021C169.04 155.584 168.716 162.504 164.461 166.692C161.242 169.859 157.329 173.465 154.222 176.743C154.083 176.889 153.939 177.033 153.792 177.174L132.302 197.68L132.292 197.69L123.766 205.004C119.963 208.266 115.224 208.123 111.717 205.891C106.771 202.743 100.906 197.101 96.6113 193.11L38.8193 139.389C28.7182 129.999 28.3545 114.125 38.0146 104.282L92.4638 48.8048Z" fill="url(#gendGrad2)"/>
+        <defs>
+          <linearGradient id="gendGrad1" x1="158.6" y1="45" x2="158.6" y2="198" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#02FE81"/><stop offset="1" stop-color="#00B159"/>
+          </linearGradient>
+          <linearGradient id="gendGrad2" x1="97.406" y1="45" x2="97.406" y2="189.44" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#02FE81"/><stop offset="1" stop-color="#038B47"/>
+          </linearGradient>
+        </defs>
       </svg>
     </div>
     <span class="nav-logo-txt">Gen<em>-D</em> Creative</span>
@@ -1207,7 +1215,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
     <div class="foot-grid">
       <div>
         <a href="#" class="nav-logo" onclick="return go('home')">
-          <div class="logo-mark"><svg viewBox="0 0 34 34" fill="none"><rect x="7" y="7" width="20" height="20" rx="2" stroke="#00ff87" stroke-width="1.4" transform="rotate(45 17 17)"/><rect x="12" y="12" width="10" height="10" rx="1" fill="#00ff87" transform="rotate(45 17 17)"/><circle cx="17" cy="17" r="2.5" fill="#06060a"/></svg></div>
+          <div class="logo-mark"><svg viewBox="0 0 240 240" fill="none"><path d="M194.33 108.66C201.784 116.398 201.575 128.707 193.863 136.187L134.243 194.014C127.42 200.632 115.994 195.796 115.994 186.29C115.994 183.427 117.135 180.683 119.164 178.664L161.048 136.989C169.017 129.06 169.113 116.191 161.264 108.144L120.242 66.085C118.073 63.8607 116.859 60.8765 116.859 57.7695C116.859 47.0516 129.91 41.7879 137.346 49.5068L194.33 108.66Z" fill="url(#gendGradF)" stroke="#059A50"/><path d="M92.4638 48.8048C100.492 40.6254 114.399 46.3098 114.399 57.7706C114.399 61.1239 113.083 64.3443 110.734 66.7374L73.5517 104.618C64.1523 114.194 64.6655 129.684 74.6787 138.616L114.162 173.836C116.657 176.062 121.103 177.149 123.395 174.714L137.467 159.767C139.064 158.071 139.73 155.3 138.222 153.524L130.321 144.215C127.921 141.387 124.4 139.757 120.691 139.757H97.9755C91.7332 139.757 86.6723 134.696 86.6718 128.453C86.672 122.211 91.733 117.15 97.9755 117.15H129.983C130.942 117.15 131.903 117.196 132.856 117.295C135.514 117.572 138.077 118.852 139.973 121.101L165.193 151.021C169.04 155.584 168.716 162.504 164.461 166.692C161.242 169.859 157.329 173.465 154.222 176.743C154.083 176.889 153.939 177.033 153.792 177.174L132.302 197.68L132.292 197.69L123.766 205.004C119.963 208.266 115.224 208.123 111.717 205.891C106.771 202.743 100.906 197.101 96.6113 193.11L38.8193 139.389C28.7182 129.999 28.3545 114.125 38.0146 104.282L92.4638 48.8048Z" fill="url(#gendGradF2)"/><defs><linearGradient id="gendGradF" x1="158.6" y1="45" x2="158.6" y2="198" gradientUnits="userSpaceOnUse"><stop stop-color="#02FE81"/><stop offset="1" stop-color="#00B159"/></linearGradient><linearGradient id="gendGradF2" x1="97.406" y1="45" x2="97.406" y2="189.44" gradientUnits="userSpaceOnUse"><stop stop-color="#02FE81"/><stop offset="1" stop-color="#038B47"/></linearGradient></defs></svg></div>
           <span class="nav-logo-txt">Gen<em>-D</em> Creative</span>
         </a>
         <p>Digital Design & Development Studio based in Chennai, India. Serving clients worldwide with design, development, and creative production.</p>
@@ -1592,7 +1600,7 @@ body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9996;o
   <footer class="site-footer">
     <div class="foot-grid">
       <div>
-        <a href="#" class="nav-logo" onclick="return go('home')"><div class="logo-mark"><svg viewBox="0 0 34 34" fill="none"><rect x="7" y="7" width="20" height="20" rx="2" stroke="#00ff87" stroke-width="1.4" transform="rotate(45 17 17)"/><rect x="12" y="12" width="10" height="10" rx="1" fill="#00ff87" transform="rotate(45 17 17)"/><circle cx="17" cy="17" r="2.5" fill="#06060a"/></svg></div><span class="nav-logo-txt">Gen<em>-D</em> Creative</span></a>
+        <a href="#" class="nav-logo" onclick="return go('home')"><div class="logo-mark"><svg viewBox="0 0 240 240" fill="none"><path d="M194.33 108.66C201.784 116.398 201.575 128.707 193.863 136.187L134.243 194.014C127.42 200.632 115.994 195.796 115.994 186.29C115.994 183.427 117.135 180.683 119.164 178.664L161.048 136.989C169.017 129.06 169.113 116.191 161.264 108.144L120.242 66.085C118.073 63.8607 116.859 60.8765 116.859 57.7695C116.859 47.0516 129.91 41.7879 137.346 49.5068L194.33 108.66Z" fill="url(#gendGradF)" stroke="#059A50"/><path d="M92.4638 48.8048C100.492 40.6254 114.399 46.3098 114.399 57.7706C114.399 61.1239 113.083 64.3443 110.734 66.7374L73.5517 104.618C64.1523 114.194 64.6655 129.684 74.6787 138.616L114.162 173.836C116.657 176.062 121.103 177.149 123.395 174.714L137.467 159.767C139.064 158.071 139.73 155.3 138.222 153.524L130.321 144.215C127.921 141.387 124.4 139.757 120.691 139.757H97.9755C91.7332 139.757 86.6723 134.696 86.6718 128.453C86.672 122.211 91.733 117.15 97.9755 117.15H129.983C130.942 117.15 131.903 117.196 132.856 117.295C135.514 117.572 138.077 118.852 139.973 121.101L165.193 151.021C169.04 155.584 168.716 162.504 164.461 166.692C161.242 169.859 157.329 173.465 154.222 176.743C154.083 176.889 153.939 177.033 153.792 177.174L132.302 197.68L132.292 197.69L123.766 205.004C119.963 208.266 115.224 208.123 111.717 205.891C106.771 202.743 100.906 197.101 96.6113 193.11L38.8193 139.389C28.7182 129.999 28.3545 114.125 38.0146 104.282L92.4638 48.8048Z" fill="url(#gendGradF2)"/><defs><linearGradient id="gendGradF" x1="158.6" y1="45" x2="158.6" y2="198" gradientUnits="userSpaceOnUse"><stop stop-color="#02FE81"/><stop offset="1" stop-color="#00B159"/></linearGradient><linearGradient id="gendGradF2" x1="97.406" y1="45" x2="97.406" y2="189.44" gradientUnits="userSpaceOnUse"><stop stop-color="#02FE81"/><stop offset="1" stop-color="#038B47"/></linearGradient></defs></svg></div><span class="nav-logo-txt">Gen<em>-D</em> Creative</span></a>
         <p>Digital Design & Development Studio based in Chennai, India. Serving clients worldwide.</p>
         <div class="foot-made">// Made with strong coffee and stronger opinions.</div>
       </div>
